@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Aboadi Rural Agricultural Technology Centre (ARATC) - Official Website
 
-## Getting Started
+This is the official institutional website for the Aboadi Rural Agricultural Technology Centre (ARATC), a Ghanaian non-governmental, non-profit organization that delivers practical agricultural training, livelihood development, research, and consultancy services.
 
-First, run the development server:
+## Project Overview
+The website establishes a credible, modern, fast, and mobile-friendly digital presence for ARATC. It communicates the organization's practical experience and visible impact to development partners, government agencies, private-sector companies, and community members.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technology Stack
+- **Framework:** Next.js 15.3 (App Router)
+- **UI Library:** React 19
+- **Language:** JavaScript/JSX
+- **Styling:** Tailwind CSS 4
+- **Animations:** Motion for React
+- **Icons:** Lucide React
+- **Deployment:** Vercel
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Local Setup
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. **Clone the repository**
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Environment Variables:**
+   Copy the example environment file and update it with your own credentials if testing the contact form.
+   ```bash
+   cp .env.example .env.local
+   ```
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Commands
+- `npm run dev` - Starts the local development server.
+- `npm run build` - Builds the application for production.
+- `npm run start` - Runs the built application.
+- `npm run lint` - Runs ESLint to catch errors and enforce code style.
 
-## Learn More
+## Folder Structure
+- `/app` - Next.js App Router pages, layouts, and server actions.
+- `/components` - Reusable UI components (Header, Footer, Button, etc.).
+- `/content` - Structured local content files (services, projects, news) acting as a lightweight CMS.
+- `/docs` - Project documentation including CMS integration and content gap records.
+- `/lib` - Utility functions.
+- `/public` - Static assets like images and logos.
 
-To learn more about Next.js, take a look at the following resources:
+## Environment Variables
+The `.env.example` file contains the required environment variables. Primarily, these are needed for configuring the email delivery provider used by the contact form.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Content-Editing Workflow
+Content is driven by structured JavaScript files located in the `/content` directory.
+- To add a new service, edit `content/services.js`.
+- To add a new project, edit `content/projects.js`.
+- To publish a new article, edit `content/news.js`.
+These files export arrays of objects that are automatically rendered by the dynamic pages.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Form-Delivery Setup
+The contact form submits data to a server action located at `app/actions/contact.js`. Currently, it simulates a successful submission. To enable actual email delivery, integrate an email provider SDK (such as Resend or SendGrid) within the `submitEnquiry` function using the API keys from your environment variables.
 
-## Deploy on Vercel
+## Deployment Notes
+The application is optimized for deployment on Vercel. Push your code to a Git repository and import it into Vercel. The framework preset should automatically detect Next.js and apply the correct build settings.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## CMS Integration Direction
+For a detailed guide on how to replace the local `/content` files with a Headless CMS like Sanity or Strapi, refer to `docs/cms-integration.md`.
