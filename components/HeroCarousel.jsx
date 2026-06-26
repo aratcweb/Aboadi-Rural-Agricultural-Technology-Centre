@@ -4,12 +4,12 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const images = [
-  "/hero-images/image 3.jpg",
-  "/hero-images/image 24.jpg",
-  "/hero-images/image 25.jpg",
-  "/hero-images/image 14.jpg",
-  "/hero-images/image 17.jpg",
-  "/hero-images/image 7.jpg",
+  { src: "/hero-images/image 3.jpg", position: "object-center" },
+  { src: "/hero-images/image 24.jpg", position: "object-top" }, // Often better for faces/people
+  { src: "/hero-images/image 25.jpg", position: "object-center" },
+  { src: "/hero-images/image 14.jpg", position: "object-center" },
+  { src: "/hero-images/image 17.jpg", position: "object-top" }, // Adjust based on subject
+  { src: "/hero-images/image 7.jpg", position: "object-center" },
 ];
 
 export function HeroCarousel() {
@@ -25,14 +25,14 @@ export function HeroCarousel() {
   return (
     <>
       <div className="absolute inset-0 z-0">
-        {images.map((src, index) => (
+        {images.map((img, index) => (
           <Image
-            key={src}
-            src={src}
+            key={img.src}
+            src={img.src}
             alt={`Hero Background ${index + 1}`}
             fill
             priority={index === 0}
-            className={`object-cover transition-opacity duration-1000 ${
+            className={`object-cover ${img.position} transition-opacity duration-1000 ${
               index === currentIndex ? "opacity-100" : "opacity-0"
             }`}
           />
