@@ -194,8 +194,13 @@ export default function Home() {
         <Container>
           <div className="max-w-4xl mx-auto bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-green-100/50">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-              <div className="aspect-square md:aspect-[3/4] bg-green-50 rounded-2xl border border-green-100 flex items-center justify-center text-green-900/40">
-                <Icons.User className="w-12 h-12" />
+              <div className="relative aspect-square md:aspect-[3/4] rounded-2xl overflow-hidden shadow-sm">
+                <Image 
+                  src="/image 32.png" 
+                  alt="John Kwamina Gyimah - Founder and Executive Director"
+                  fill
+                  className="object-cover object-top scale-[1.03]"
+                />
               </div>
               <div className="md:col-span-2 space-y-6">
                 <div>

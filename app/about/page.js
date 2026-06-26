@@ -2,6 +2,7 @@ import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
 import * as Icons from "lucide-react";
+import Image from "next/image";
 
 export const metadata = {
   title: "About Us",
@@ -134,11 +135,14 @@ export default function AboutPage() {
       <section className="py-20 md:py-28 bg-white border-t border-green-100">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Image Placeholder */}
-            <div className="aspect-[4/3] bg-green-50 rounded-3xl border border-green-100 flex flex-col items-center justify-center text-green-900/40 p-8 text-center">
-              <Icons.Users className="w-16 h-16 mb-4" />
-              <p className="font-medium">Board of Directors portrait</p>
-              <p className="text-sm mt-2 max-w-xs">Awaiting management confirmation of names and portfolios.</p>
+            {/* Governance & Leadership Image */}
+            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-green-100 shadow-sm">
+              <Image 
+                src="/image 31.jpg" 
+                alt="ARATC Governance and Leadership"
+                fill
+                className="object-cover"
+              />
             </div>
             
             <div className="space-y-6">
