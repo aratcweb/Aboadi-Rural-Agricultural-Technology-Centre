@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "./Container";
 import { Mail, MapPin, Phone } from "lucide-react";
@@ -11,7 +12,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand & Intro */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-white font-display">ARATC</h3>
+            <div className="flex items-center gap-3">
+              <div className="bg-white p-2 rounded-lg inline-flex">
+                <Image src="/logo.png" alt="ARATC Logo" width={40} height={40} className="h-10 w-auto object-contain" />
+              </div>
+              <h3 className="text-2xl font-bold text-white font-display">ARATC</h3>
+            </div>
             <p className="text-sm text-green-100/80 font-medium">
               Aboadi Rural Agricultural Technology Centre
             </p>

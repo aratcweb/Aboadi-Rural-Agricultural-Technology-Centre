@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { Container } from "./Container";
 import { Button } from "./Button";
 import { cn } from "@/lib/utils";
@@ -50,7 +51,8 @@ export function Header() {
       <Container>
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center gap-3">
-            <Link href="/" className="flex items-center gap-2 group">
+            <Link href="/" className="flex items-center gap-3 group">
+              <Image src="/logo.png" alt="ARATC Logo" width={48} height={48} className="h-12 w-auto object-contain" />
               {/* Fallback text logo if image is missing/updating */}
               <div className="flex flex-col">
                 <span className="text-2xl font-bold text-green-950 group-hover:text-green-700 transition-colors">ARATC</span>
@@ -100,6 +102,7 @@ export function Header() {
         <div className="lg:hidden fixed inset-0 z-50 bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 h-dvh overflow-y-auto">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
+              <Image src="/logo.png" alt="ARATC Logo" width={32} height={32} className="h-8 w-auto object-contain" />
               <span className="text-2xl font-bold text-green-950">ARATC</span>
             </Link>
             <button

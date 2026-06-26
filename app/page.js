@@ -5,27 +5,28 @@ import { siteInfo } from "@/content/site";
 import { services } from "@/content/services";
 import * as Icons from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import { HeroCarousel } from "@/components/HeroCarousel";
 
 export default function Home() {
   return (
     <main className="flex-1 flex flex-col">
       {/* Hero Section */}
       <section className="relative bg-green-950 text-white pt-20 pb-28 md:pt-32 md:pb-40 overflow-hidden">
-        {/* Placeholder for Hero background image */}
-        <div className="absolute inset-0 bg-green-950/90 z-10" />
+        <HeroCarousel />
         <Container className="relative z-20">
           <div className="max-w-3xl space-y-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight text-balance">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight text-balance !text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
               Empowering communities through agriculture, skills and enterprise
             </h1>
-            <p className="text-lg md:text-xl text-green-100 max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-xl !text-white max-w-2xl leading-relaxed drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] font-medium">
               ARATC provides practical agricultural training, livelihood development, consultancy services and community-based programmes that help people build sustainable incomes and stronger communities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button href="/projects" variant="primary" size="lg">
+              <Button href="/projects" variant="primary" size="lg" className="bg-[#16a34a] hover:bg-[#15803d] !text-white border-none shadow-lg">
                 Explore Our Work
               </Button>
-              <Button href="/contact?type=discuss-partnership" variant="outline" size="lg" className="border-white text-white hover:bg-white/10 hover:text-white">
+              <Button href="/contact?type=discuss-partnership" variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white/20 hover:text-white bg-black/40 backdrop-blur-sm shadow-lg">
                 Partner With Us
               </Button>
             </div>
@@ -73,12 +74,14 @@ export default function Home() {
                 About ARATC
               </Button>
             </div>
-            {/* Image Placeholder */}
-            <div className="aspect-[4/3] bg-green-50 rounded-2xl border border-green-100 flex items-center justify-center text-green-900/40">
-              <div className="text-center space-y-2">
-                <Icons.Image className="w-12 h-12 mx-auto" />
-                <p className="text-sm font-medium">Image: Executive Director, team or field work</p>
-              </div>
+            {/* Experience Image */}
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-green-100 shadow-lg">
+              <Image 
+                src="/image 28.jpg" 
+                alt="ARATC Experience rooted in communities"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </Container>
