@@ -14,7 +14,12 @@ const merriweather = Merriweather({
   display: "swap",
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  "https://www.aboadiruralagriculturaltechnologycentre.com";
+
 export const metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     template: "%s | Aboadi Rural Agricultural Technology Centre (ARATC)",
     default: "Aboadi Rural Agricultural Technology Centre (ARATC) | Practical Agriculture & Livelihood Training",
@@ -22,10 +27,19 @@ export const metadata = {
   description: "ARATC is a Ghanaian non-governmental, non-profit organization that delivers practical agricultural training, livelihood development, research and consultancy services.",
   keywords: ["agriculture", "livelihood training", "Ghana", "NGO", "rural development", "farming", "community support"],
   authors: [{ name: "ARATC" }],
+  icons: {
+    icon: [
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon.png", sizes: "500x500", type: "image/png" },
+    ],
+    shortcut: "/favicon-48x48.png",
+    apple: "/favicon-192x192.png",
+  },
   openGraph: {
     title: "Aboadi Rural Agricultural Technology Centre (ARATC)",
     description: "Empowering communities through agriculture, skills and enterprise in Ghana.",
-    url: "https://aratc-ghana.org",
+    url: siteUrl,
     siteName: "ARATC",
     locale: "en_GH",
     type: "website",
