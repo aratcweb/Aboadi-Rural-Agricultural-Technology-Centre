@@ -1,3 +1,9 @@
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  "https://www.aboadiruralagriculturaltechnologycentre.com";
+
+const baseUrl = siteUrl.replace(/\/$/, "");
+
 export default function robots() {
   return {
     rules: {
@@ -5,6 +11,6 @@ export default function robots() {
       allow: '/',
       disallow: ['/admin', '/api/'],
     },
-    sitemap: 'https://www.aboadiruralagriculturaltechnologycentre.com/sitemap.xml',
+    sitemap: `${baseUrl}/sitemap.xml`,
   }
 }

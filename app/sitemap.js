@@ -2,54 +2,73 @@ import { services } from "@/content/services";
 import { projects } from "@/content/projects";
 import { news } from "@/content/news";
 
-export default function sitemap() {
-  const baseUrl = 'https://www.aboadiruralagriculturaltechnologycentre.com';
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  "https://www.aboadiruralagriculturaltechnologycentre.com";
 
-  // Base routes
-  const routes = [
-    '',
-    '/about',
-    '/services',
-    '/projects',
-    '/gallery',
-    '/leadership',
-    '/partners',
-    '/news',
-    '/contact',
-    '/privacy',
-  ].map((route) => ({
-    url: `${baseUrl}${route}`,
-    changeFrequency: 'weekly',
-    priority: route === '' ? 1 : 0.8,
+const baseUrl = siteUrl.replace(/\/$/, "");
+const lastModified = new Date("2026-06-27");
+
+const staticRoutes = [
+  { path: "", changeFrequency: "weekly", priority: 1 },
+  { path: "/about", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/services", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/projects", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/gallery", changeFrequency: "monthly", priority: 0.6 },
+  { path: "/leadership", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/partners", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/news", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/contact", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
+];
+
+function toUrl(path) {
+  return `${baseUrl}${path}`;
+}
+
+function toLastModified(value) {
+  if (!value) {
+    return lastModified;
+  }
+
+  const date = new Date(value);
+  return Number.isNaN(date.valueOf()) ? lastModified : date;
+}
+
+export default function sitemap() {
+  const routes = staticRoutes.map((route) => ({
+    url: toUrl(route.path),
+    lastModified,
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
   }));
 
-  // Dynamic routes
   const serviceRoutes = services
     .filter(service => service.status === "published")
     .map((service) => ({
-    url: `${baseUrl}/services/${service.slug}`,
-    ...(service.updatedAt && { lastModified: new Date(service.updatedAt) }),
-    changeFrequency: 'monthly',
-    priority: 0.7,
-  }));
+      url: toUrl(`/services/${service.slug}`),
+      lastModified: toLastModified(service.updatedAt),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    }));
 
   const projectRoutes = projects
     .filter(project => project.publicationStatus === "published")
     .map((project) => ({
-    url: `${baseUrl}/projects/${project.slug}`,
-    ...(project.updatedAt && { lastModified: new Date(project.updatedAt) }),
-    changeFrequency: 'monthly',
-    priority: 0.7,
-  }));
+      url: toUrl(`/projects/${project.slug}`),
+      lastModified: toLastModified(project.updatedAt || project.endDate),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    }));
 
   const newsRoutes = news
     .filter(item => item.status === "published")
     .map((item) => ({
-    url: `${baseUrl}/news/${item.slug}`,
-    ...((item.updatedAt || item.date) && { lastModified: new Date(item.updatedAt || item.date) }),
-    changeFrequency: 'yearly',
-    priority: 0.6,
-  }));
+      url: toUrl(`/news/${item.slug}`),
+      lastModified: toLastModified(item.updatedAt || item.date),
+      changeFrequency: "yearly",
+      priority: 0.6,
+    }));
 
   return [...routes, ...serviceRoutes, ...projectRoutes, ...newsRoutes];
 }
