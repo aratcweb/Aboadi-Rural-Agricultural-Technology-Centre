@@ -5,6 +5,6 @@ export default function robots() {
       allow: '/',
       disallow: ['/admin', '/api/'],
     },
-    sitemap: 'https://aratc-ghana.org/sitemap.xml',
+    sitemap: 'https://www.aboadiruralagriculturaltechnologycentre.com/sitemap.xml',
   }
 }

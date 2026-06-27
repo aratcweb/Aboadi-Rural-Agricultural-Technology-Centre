@@ -3,7 +3,7 @@ import { projects } from "@/content/projects";
 import { news } from "@/content/news";
 
 export default function sitemap() {
-  const baseUrl = 'https://aratc-ghana.org'; // Placeholder URL
+  const baseUrl = 'https://www.aboadiruralagriculturaltechnologycentre.com';
 
   // Base routes
   const routes = [
@@ -25,21 +25,27 @@ export default function sitemap() {
   }));
 
   // Dynamic routes
-  const serviceRoutes = services.map((service) => ({
+  const serviceRoutes = services
+    .filter(service => service.status === "published")
+    .map((service) => ({
     url: `${baseUrl}/services/${service.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 0.7,
   }));
 
-  const projectRoutes = projects.map((project) => ({
+  const projectRoutes = projects
+    .filter(project => project.publicationStatus === "published")
+    .map((project) => ({
     url: `${baseUrl}/projects/${project.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 0.7,
   }));
 
-  const newsRoutes = news.map((item) => ({
+  const newsRoutes = news
+    .filter(item => item.status === "published")
+    .map((item) => ({
     url: `${baseUrl}/news/${item.slug}`,
     lastModified: new Date(item.date),
     changeFrequency: 'yearly',
