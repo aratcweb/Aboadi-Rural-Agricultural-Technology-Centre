@@ -19,7 +19,6 @@ export default function sitemap() {
     '/privacy',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: route === '' ? 1 : 0.8,
   }));
@@ -29,7 +28,7 @@ export default function sitemap() {
     .filter(service => service.status === "published")
     .map((service) => ({
     url: `${baseUrl}/services/${service.slug}`,
-    lastModified: new Date(),
+    ...(service.updatedAt && { lastModified: new Date(service.updatedAt) }),
     changeFrequency: 'monthly',
     priority: 0.7,
   }));
@@ -38,7 +37,7 @@ export default function sitemap() {
     .filter(project => project.publicationStatus === "published")
     .map((project) => ({
     url: `${baseUrl}/projects/${project.slug}`,
-    lastModified: new Date(),
+    ...(project.updatedAt && { lastModified: new Date(project.updatedAt) }),
     changeFrequency: 'monthly',
     priority: 0.7,
   }));
@@ -47,7 +46,7 @@ export default function sitemap() {
     .filter(item => item.status === "published")
     .map((item) => ({
     url: `${baseUrl}/news/${item.slug}`,
-    lastModified: new Date(item.date),
+    ...((item.updatedAt || item.date) && { lastModified: new Date(item.updatedAt || item.date) }),
     changeFrequency: 'yearly',
     priority: 0.6,
   }));
