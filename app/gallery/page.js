@@ -1,6 +1,7 @@
 import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import * as Icons from "lucide-react";
+import Image from "next/image";
 
 export const metadata = {
   title: "Media Gallery",
@@ -34,16 +35,19 @@ export default function GalleryPage() {
 
           {/* Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
+            {Array.from({length: 32}, (_, i) => i + 1).map((i) => (
               <div key={i} className="group relative rounded-2xl overflow-hidden bg-cream border border-green-100 aspect-square cursor-pointer">
-                <div className="absolute inset-0 flex items-center justify-center text-green-900/30 group-hover:scale-110 transition-transform duration-500">
-                  <Icons.Camera className="w-12 h-12" />
-                </div>
+                <Image 
+                  src={`/gallery-images/image-${i}.webp`}
+                  alt={`ARATC Activity ${i}`}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
                 {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-green-950/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end text-white">
-                  <span className="text-xs font-semibold text-gold uppercase tracking-wider mb-2">Category</span>
+                  <span className="text-xs font-semibold text-gold uppercase tracking-wider mb-2">ARATC Activity</span>
                   <p className="font-medium text-sm line-clamp-3">
-                    Descriptive caption for the activity. Participants take part in a practical session facilitated by ARATC.
+                    Practical agricultural and livelihood training session in progress.
                   </p>
                   <div className="flex items-center gap-2 mt-4 text-xs text-green-100/70">
                     <Icons.MapPin className="w-3 h-3" /> Western Region

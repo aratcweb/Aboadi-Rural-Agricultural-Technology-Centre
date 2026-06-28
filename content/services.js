@@ -14,7 +14,8 @@ export const services = [
     ],
     targetGroups: ["Farmers", "Cooperatives", "Youth groups", "Women's groups"],
     deliveryFormats: ["Group training", "Demonstration", "Site visit", "Technical assistance"],
-    status: "published"
+    status: "published",
+    image: "/hero-images/image 3.webp"
   },
   {
     id: "livelihood-skills",
@@ -31,7 +32,8 @@ export const services = [
     ],
     targetGroups: ["Women's groups", "Youth", "Community organizations"],
     deliveryFormats: ["Group training", "Demonstration", "Institutional training"],
-    status: "published"
+    status: "published",
+    image: "/image 29.webp"
   },
   {
     id: "entrepreneurship",
@@ -48,7 +50,8 @@ export const services = [
     ],
     targetGroups: ["Agri-preneurs", "Cooperatives", "Small business owners"],
     deliveryFormats: ["Workshop", "Consultancy", "Mentorship"],
-    status: "published"
+    status: "published",
+    image: "/hero-images/image 25.webp"
   },
   {
     id: "research-consultancy",
@@ -60,7 +63,8 @@ export const services = [
     learningOutcomes: [],
     targetGroups: ["Development partners", "Government agencies", "Private sector", "NGOs"],
     deliveryFormats: ["Consultancy", "Technical support", "Project implementation"],
-    status: "published"
+    status: "published",
+    image: "/hero-images/image 14.webp"
   },
   {
     id: "private-sector",
@@ -72,7 +76,8 @@ export const services = [
     learningOutcomes: [],
     targetGroups: ["Agribusinesses", "Corporate CSR teams", "Buyers and processors"],
     deliveryFormats: ["Consultancy", "Project delivery", "Community engagement"],
-    status: "published"
+    status: "published",
+    image: "/hero-images/image 17.webp"
   },
   {
     id: "community-development",
@@ -89,7 +94,8 @@ export const services = [
     ],
     targetGroups: ["Communities", "Local authorities", "Vulnerable populations"],
     deliveryFormats: ["Community mobilization", "Workshop", "Project implementation"],
-    status: "published"
+    status: "published",
+    image: "/hero-images/image 7.webp"
   }
 ];
 

@@ -4,6 +4,7 @@ import { Button } from "@/components/Button";
 import { projects } from "@/content/projects";
 import * as Icons from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "Projects & Impact",
@@ -44,8 +45,17 @@ export default function ProjectsPage() {
               >
                 {/* Image */}
                 <div className="aspect-[4/3] bg-green-50 flex items-center justify-center text-green-900/40 border-b border-green-100 relative overflow-hidden">
-                  <Icons.Image className="w-10 h-10 group-hover:scale-110 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-green-950/0 group-hover:bg-green-950/5 transition-colors" />
+                  {project.images && project.images.length > 0 ? (
+                    <Image 
+                      src={project.images[0]} 
+                      alt={project.title} 
+                      fill 
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <Icons.Image className="w-10 h-10 group-hover:scale-110 transition-transform duration-500" />
+                  )}
+                  <div className="absolute inset-0 bg-green-950/0 group-hover:bg-green-950/5 transition-colors z-10" />
                 </div>
                 
                 {/* Content */}

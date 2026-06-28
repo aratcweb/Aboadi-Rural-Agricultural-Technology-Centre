@@ -27,7 +27,7 @@ export const projects = [
       "Participants established secondary income streams",
       "Improved household financial resilience"
     ],
-    images: [],
+    images: ["/gallery-images/image-1.webp"],
     testimonial: null,
     consentConfirmed: false,
     publicationStatus: "published"
@@ -58,7 +58,7 @@ export const projects = [
     outcomes: [
       "Adoption of snail farming as a viable micro-enterprise"
     ],
-    images: [],
+    images: ["/gallery-images/image-2.webp"],
     testimonial: null,
     consentConfirmed: false,
     publicationStatus: "published"
@@ -88,7 +88,7 @@ export const projects = [
     outcomes: [
       "Participants prepared for post-retirement income generation"
     ],
-    images: [],
+    images: ["/gallery-images/image-3.webp"],
     testimonial: null,
     consentConfirmed: false,
     publicationStatus: "published"

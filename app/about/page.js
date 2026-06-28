@@ -138,7 +138,7 @@ export default function AboutPage() {
             {/* Governance & Leadership Image */}
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-green-100 shadow-sm">
               <Image 
-                src="/image 31.jpg" 
+                src="/image 31.webp" 
                 alt="ARATC Governance and Leadership"
                 fill
                 className="object-cover"

@@ -4,12 +4,12 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const images = [
-  { src: "/hero-images/image 3.jpg", position: "object-center" },
-  { src: "/hero-images/image 24.jpg", position: "object-top" }, // Often better for faces/people
-  { src: "/hero-images/image 25.jpg", position: "object-center" },
-  { src: "/hero-images/image 14.jpg", position: "object-center" },
-  { src: "/hero-images/image 17.jpg", position: "object-top" }, // Adjust based on subject
-  { src: "/hero-images/image 7.jpg", position: "object-center" },
+  { src: "/hero-images/image 3.webp", position: "object-center" },
+  { src: "/hero-images/image 24.webp", position: "object-top" }, // Often better for faces/people
+  { src: "/hero-images/image 25.webp", position: "object-center" },
+  { src: "/hero-images/image 14.webp", position: "object-center" },
+  { src: "/hero-images/image 17.webp", position: "object-top" }, // Adjust based on subject
+  { src: "/hero-images/image 7.webp", position: "object-center" },
 ];
 
 export function HeroCarousel() {

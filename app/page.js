@@ -77,7 +77,7 @@ export default function Home() {
             {/* Experience Image */}
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-green-100 shadow-lg">
               <Image 
-                src="/image 28.jpg" 
+                src="/image 28.webp" 
                 alt="ARATC Experience rooted in communities"
                 fill
                 className="object-cover"
@@ -164,10 +164,14 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Placeholder Project Cards */}
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="flex flex-col group">
-                <div className="aspect-[4/3] bg-green-50 rounded-2xl mb-6 overflow-hidden border border-green-100 flex items-center justify-center text-green-900/40">
-                  <Icons.Image className="w-8 h-8" />
+            {[
+              { id: 1, image: "/hero-images/image 24.webp" },
+              { id: 2, image: "/hero-images/image 25.webp" },
+              { id: 3, image: "/hero-images/image 14.webp" }
+            ].map((project) => (
+              <div key={project.id} className="flex flex-col group">
+                <div className="relative aspect-[4/3] bg-green-50 rounded-2xl mb-6 overflow-hidden border border-green-100 flex items-center justify-center text-green-900/40">
+                  <Image src={project.image} alt="Project image" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
                 <div className="flex items-center gap-3 text-xs font-medium text-muted mb-3">
                   <span className="flex items-center gap-1"><Icons.MapPin className="w-3 h-3" /> Western Region</span>
@@ -196,7 +200,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
               <div className="relative aspect-square md:aspect-[3/4] rounded-2xl overflow-hidden shadow-sm">
                 <Image 
-                  src="/image 32.png" 
+                  src="/image 32.webp" 
                   alt="John Kwamina Gyimah - Founder and Executive Director"
                   fill
                   className="object-cover object-top scale-[1.03]"

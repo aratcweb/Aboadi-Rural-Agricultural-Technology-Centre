@@ -4,6 +4,7 @@ import { Button } from "@/components/Button";
 import { services } from "@/content/services";
 import * as Icons from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "What We Do - Services & Training",
@@ -35,11 +36,14 @@ export default function ServicesDirectoryPage() {
 
               return (
                 <div key={service.id} className={`flex flex-col ${isEven ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 lg:gap-16 items-center`}>
-                  {/* Image Placeholder */}
-                  <div className="w-full lg:w-1/2 aspect-[4/3] bg-cream rounded-3xl border border-green-100 overflow-hidden flex flex-col items-center justify-center text-green-900/40 p-8 text-center group">
-                    <Icon className="w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300" />
-                    <p className="font-medium text-lg">Activity Image</p>
-                    <p className="text-sm mt-2">{service.title}</p>
+                  {/* Image */}
+                  <div className="w-full lg:w-1/2 aspect-[4/3] bg-cream rounded-3xl border border-green-100 overflow-hidden relative group">
+                    <Image 
+                      src={service.image || "/image 28.webp"} 
+                      alt={service.title} 
+                      fill 
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
 
                   {/* Content */}
