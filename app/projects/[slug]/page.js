@@ -4,6 +4,7 @@ import { Button } from "@/components/Button";
 import { projects, getProjectBySlug } from "@/content/projects";
 import * as Icons from "lucide-react";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
@@ -74,9 +75,20 @@ export default async function ProjectCaseStudyPage({ params }) {
       {/* Main Image */}
       <section className="-mt-8 relative z-10">
         <Container>
-          <div className="aspect-[21/9] bg-cream rounded-3xl border border-green-100 shadow-md flex items-center justify-center text-green-900/40">
-            <Icons.Image className="w-16 h-16" />
-            <span className="ml-4 font-medium text-lg">Main Field Image</span>
+          <div className="aspect-[21/9] bg-cream rounded-3xl border border-green-100 shadow-md flex items-center justify-center text-green-900/40 relative overflow-hidden">
+            {project.images && project.images.length > 0 ? (
+              <Image 
+                src={project.images[0]} 
+                alt={`${project.title} - Main Field Image`} 
+                fill 
+                className="object-cover"
+              />
+            ) : (
+              <>
+                <Icons.Image className="w-16 h-16" />
+                <span className="ml-4 font-medium text-lg">Main Field Image</span>
+              </>
+            )}
           </div>
         </Container>
       </section>
@@ -121,11 +133,24 @@ export default async function ProjectCaseStudyPage({ params }) {
               <div className="space-y-6">
                 <h2 className="text-2xl font-display font-bold text-green-950">Project Gallery</h2>
                 <div className="grid grid-cols-2 gap-4">
-                  {[1, 2].map((i) => (
-                    <div key={i} className="aspect-[4/3] bg-cream rounded-2xl border border-green-100 flex items-center justify-center text-green-900/40">
-                      <Icons.Camera className="w-8 h-8" />
-                    </div>
-                  ))}
+                  {project.images && project.images.length > 1 ? (
+                    project.images.slice(1).map((imgSrc, i) => (
+                      <div key={i} className="aspect-[4/3] bg-cream rounded-2xl border border-green-100 flex items-center justify-center text-green-900/40 relative overflow-hidden">
+                        <Image 
+                          src={imgSrc} 
+                          alt={`Project Activity ${i + 1}`} 
+                          fill 
+                          className="object-cover hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                    ))
+                  ) : (
+                    [1, 2].map((i) => (
+                      <div key={i} className="aspect-[4/3] bg-cream rounded-2xl border border-green-100 flex items-center justify-center text-green-900/40">
+                        <Icons.Camera className="w-8 h-8" />
+                      </div>
+                    ))
+                  )}
                 </div>
               </div>
               

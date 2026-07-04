@@ -193,35 +193,6 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Leadership Preview */}
-      <section className="py-20 md:py-28 bg-cream border-t border-green-100">
-        <Container>
-          <div className="max-w-4xl mx-auto bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-green-100/50">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-              <div className="relative aspect-square md:aspect-[3/4] rounded-2xl overflow-hidden shadow-sm">
-                <Image 
-                  src="/image 32.webp" 
-                  alt="John Kwamina Gyimah - Founder and Executive Director"
-                  fill
-                  className="object-cover object-top scale-[1.03]"
-                />
-              </div>
-              <div className="md:col-span-2 space-y-6">
-                <div>
-                  <h2 className="text-2xl md:text-3xl font-display font-bold text-green-950">John Kwamina Gyimah</h2>
-                  <p className="text-gold font-semibold mt-1">Founder and Executive Director</p>
-                </div>
-                <p className="text-muted leading-relaxed">
-                  John Kwamina Gyimah is an agricultural extension and rural-development professional with more than 36 years of experience in research, extension, programme delivery and community development. His academic and professional background includes an MPhil in Agricultural Extension, a BSc in Agricultural Extension, postgraduate training in agricultural administration and participation in the Cochran Agricultural Fellowship Program in the United States.
-                </p>
-                <Button href="/leadership" variant="secondary">
-                  Meet the Leadership & Team
-                </Button>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
 
       {/* Final CTA */}
       <section className="py-24 md:py-32 bg-green-950 text-center px-4">

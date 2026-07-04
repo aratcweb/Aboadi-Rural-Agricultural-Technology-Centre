@@ -3,6 +3,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
 import * as Icons from "lucide-react";
 import Image from "next/image";
+import { teamMembers } from "@/content/team";
 
 export const metadata = {
   title: "About Us",
@@ -127,6 +128,42 @@ export default function AboutPage() {
                 </div>
               );
             })}
+          </div>
+        </Container>
+      </section>
+
+      {/* Meet Our Team Section */}
+      <section className="py-20 md:py-28 bg-white border-t border-green-100">
+        <Container>
+          <SectionHeading 
+            title="Meet Our Technical Team" 
+            subtitle="ARATC is powered by a team of dedicated agricultural, financial, and environmental experts."
+            centered 
+            className="mb-16 mx-auto"
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-7xl mx-auto">
+            {teamMembers.map((member) => (
+              <div 
+                key={member.id} 
+                className="group bg-white rounded-3xl p-4 border-2 border-green-100/70 hover:border-green-300 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col h-full"
+              >
+                <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden mb-5 bg-cream">
+                  <Image 
+                    src={member.image} 
+                    alt={member.role} 
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 20vw"
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="w-full text-center py-2 px-3 bg-green-900 text-white rounded-xl font-bold text-sm tracking-wide mb-4">
+                  {member.role}
+                </div>
+                <p className="text-muted text-sm leading-relaxed text-left flex-1">
+                  {member.description}
+                </p>
+              </div>
+            ))}
           </div>
         </Container>
       </section>
