@@ -15,7 +15,12 @@ export const services = [
     targetGroups: ["Farmers", "Cooperatives", "Youth groups", "Women's groups"],
     deliveryFormats: ["Group training", "Demonstration", "Site visit", "Technical assistance"],
     status: "published",
-    image: "/hero-images/image 3.webp"
+    image: "/gallery-images/aquaculture-releasing-fingerlings.webp",
+    gallery: [
+      "/gallery-images/aquaculture-tarpaulin-tanks.webp",
+      "/gallery-images/beekeeping-hive-setup-farm.webp",
+      "/gallery-images/pig-farming-concrete-pen.webp"
+    ]
   },
   {
     id: "livelihood-skills",
@@ -33,7 +38,12 @@ export const services = [
     targetGroups: ["Women's groups", "Youth", "Community organizations"],
     deliveryFormats: ["Group training", "Demonstration", "Institutional training"],
     status: "published",
-    image: "/image 29.webp"
+    image: "/gallery-images/soap-making-exhibition-graduation.webp",
+    gallery: [
+      "/gallery-images/soap-making-starter-kits-truck.webp",
+      "/gallery-images/soap-making-practical-mixing.webp",
+      "/gallery-images/soap-making-pouring-molds.webp"
+    ]
   },
   {
     id: "entrepreneurship",
@@ -51,7 +61,12 @@ export const services = [
     targetGroups: ["Agri-preneurs", "Cooperatives", "Small business owners"],
     deliveryFormats: ["Workshop", "Consultancy", "Mentorship"],
     status: "published",
-    image: "/hero-images/image 25.webp"
+    image: "/gallery-images/military-livelihood-classroom-training.webp",
+    gallery: [
+      "/gallery-images/military-compost-rearing-training.webp",
+      "/gallery-images/military-partnership-award.webp",
+      "/gallery-images/community-workshop-laptop-presentation.webp"
+    ]
   },
   {
     id: "research-consultancy",
@@ -64,7 +79,12 @@ export const services = [
     targetGroups: ["Development partners", "Government agencies", "Private sector", "NGOs"],
     deliveryFormats: ["Consultancy", "Technical support", "Project implementation"],
     status: "published",
-    image: "/hero-images/image 14.webp"
+    image: "/gallery-images/community-workshop-laptop-presentation.webp",
+    gallery: [
+      "/gallery-images/community-agricultural-training-hall.webp",
+      "/gallery-images/community-training-library.webp",
+      "/gallery-images/aquaculture-fingerlings-presentation.webp"
+    ]
   },
   {
     id: "private-sector",
@@ -77,7 +97,12 @@ export const services = [
     targetGroups: ["Agribusinesses", "Corporate CSR teams", "Buyers and processors"],
     deliveryFormats: ["Consultancy", "Project delivery", "Community engagement"],
     status: "published",
-    image: "/hero-images/image 17.webp"
+    image: "/gallery-images/aquaculture-mobile-tanks-outdoor.webp",
+    gallery: [
+      "/gallery-images/aquaculture-mobile-tanks-farmers.webp",
+      "/gallery-images/nursery-potted-plants-training.webp",
+      "/gallery-images/livestock-snail-pens-outdoor.webp"
+    ]
   },
   {
     id: "community-development",
@@ -95,7 +120,12 @@ export const services = [
     targetGroups: ["Communities", "Local authorities", "Vulnerable populations"],
     deliveryFormats: ["Community mobilization", "Workshop", "Project implementation"],
     status: "published",
-    image: "/hero-images/image 7.webp"
+    image: "/gallery-images/community-agricultural-training-hall.webp",
+    gallery: [
+      "/gallery-images/community-training-library.webp",
+      "/gallery-images/ruminant-rearing-sheep-goat-pen.webp",
+      "/gallery-images/ruminant-wooden-pen-outdoor.webp"
+    ]
   }
 ];
 

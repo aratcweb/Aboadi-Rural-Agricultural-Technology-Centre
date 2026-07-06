@@ -3,6 +3,7 @@ import { Button } from "@/components/Button";
 import { SectionHeading } from "@/components/SectionHeading";
 import { siteInfo } from "@/content/site";
 import { services } from "@/content/services";
+import { projects } from "@/content/projects";
 import * as Icons from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -163,29 +164,30 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Placeholder Project Cards */}
-            {[
-              { id: 1, image: "/hero-images/image 24.webp" },
-              { id: 2, image: "/hero-images/image 25.webp" },
-              { id: 3, image: "/hero-images/image 14.webp" }
-            ].map((project) => (
+            {projects.slice(0, 3).map((project) => (
               <div key={project.id} className="flex flex-col group">
-                <div className="relative aspect-[4/3] bg-green-50 rounded-2xl mb-6 overflow-hidden border border-green-100 flex items-center justify-center text-green-900/40">
-                  <Image src={project.image} alt="Project image" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div className="relative aspect-[4/3] bg-green-50 rounded-2xl mb-6 overflow-hidden border border-green-100 shadow-md">
+                  <Image 
+                    src={project.images[0] || "/gallery-images/aquaculture-releasing-fingerlings.webp"} 
+                    alt={project.title} 
+                    fill 
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
                 </div>
                 <div className="flex items-center gap-3 text-xs font-medium text-muted mb-3">
-                  <span className="flex items-center gap-1"><Icons.MapPin className="w-3 h-3" /> Western Region</span>
+                  <span className="flex items-center gap-1"><Icons.MapPin className="w-3 h-3" /> {project.location}</span>
                   <span>•</span>
-                  <span>Requires Confirmation</span>
+                  <span>{project.theme}</span>
                 </div>
-                <h3 className="text-xl font-bold text-green-950 mb-3 group-hover:text-green-700 transition-colors">
-                  Project title requires confirmation
+                <h3 className="text-xl font-bold text-green-950 mb-3 group-hover:text-green-700 transition-colors line-clamp-2">
+                  {project.title}
                 </h3>
-                <p className="text-muted text-sm line-clamp-2 mb-4 flex-1">
-                  Project description placeholder. This will be replaced with real data once projects are approved.
+                <p className="text-muted text-sm line-clamp-3 mb-4 flex-1">
+                  {project.challenge}
                 </p>
-                <Link href="/projects" className="text-green-700 font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">
-                  Read Project <Icons.ArrowRight className="w-4 h-4" />
+                <Link href={`/projects/${project.slug}`} className="text-green-700 font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">
+                  Read Case Study <Icons.ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             ))}

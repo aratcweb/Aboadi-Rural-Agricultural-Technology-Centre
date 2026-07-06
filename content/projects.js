@@ -27,7 +27,12 @@ export const projects = [
       "Participants established secondary income streams",
       "Improved household financial resilience"
     ],
-    images: ["/gallery-images/image-1.webp", "/gallery-images/image 33.webp", "/gallery-images/image 34.webp"],
+    images: [
+      "/gallery-images/soap-making-exhibition-graduation.webp",
+      "/gallery-images/soap-making-starter-kits-truck.webp",
+      "/gallery-images/beekeeping-hive-setup-farm.webp",
+      "/gallery-images/ruminant-rearing-sheep-goat-pen.webp"
+    ],
     testimonial: null,
     consentConfirmed: false,
     publicationStatus: "published"
@@ -58,7 +63,11 @@ export const projects = [
     outcomes: [
       "Adoption of snail farming as a viable micro-enterprise"
     ],
-    images: ["/gallery-images/image-2.webp", "/gallery-images/image 35.webp", "/gallery-images/image 36.webp"],
+    images: [
+      "/gallery-images/livestock-snail-pens-outdoor.webp",
+      "/gallery-images/nursery-potted-plants-training.webp",
+      "/gallery-images/ruminant-wooden-pen-outdoor.webp"
+    ],
     testimonial: null,
     consentConfirmed: false,
     publicationStatus: "published"
@@ -88,7 +97,12 @@ export const projects = [
     outcomes: [
       "Participants prepared for post-retirement income generation"
     ],
-    images: ["/gallery-images/image-3.webp", "/gallery-images/image 37.webp", "/gallery-images/image 38.webp"],
+    images: [
+      "/gallery-images/military-livelihood-classroom-training.webp",
+      "/gallery-images/military-compost-rearing-training.webp",
+      "/gallery-images/aquaculture-tarpaulin-tanks.webp",
+      "/gallery-images/military-partnership-award.webp"
+    ],
     testimonial: null,
     consentConfirmed: false,
     publicationStatus: "published"

@@ -5,6 +5,7 @@ import { services, getServiceBySlug } from "@/content/services";
 import * as Icons from "lucide-react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 export async function generateStaticParams() {
   return services.map((service) => ({
@@ -60,11 +61,16 @@ export default async function ServicePage({ params }) {
               </div>
             </div>
             
-            {/* Hero Image Placeholder */}
-            <div className="aspect-[4/3] lg:aspect-square bg-cream rounded-3xl border border-green-100 flex items-center justify-center text-green-900/40 p-8 text-center shadow-sm">
-              <Icons.Image className="w-16 h-16 mb-4" />
-              <p className="font-medium text-lg">Main Training Photograph</p>
-              <p className="text-sm mt-2 max-w-xs text-balance">Strong photograph of ARATC conducting the activity.</p>
+            {/* Hero Image */}
+            <div className="relative aspect-[4/3] lg:aspect-square bg-cream rounded-3xl border border-green-100 overflow-hidden shadow-md">
+              <Image
+                src={service.image}
+                alt={service.title}
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
         </Container>
@@ -93,18 +99,25 @@ export default async function ServicePage({ params }) {
                 </div>
               )}
 
-              {/* Gallery Placeholder */}
-              <div className="space-y-6">
-                <h2 className="text-2xl font-display font-bold text-green-950">Practical Demonstration</h2>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {[1, 2, 3].map((i) => (
-                    <div key={i} className="aspect-square bg-cream rounded-xl border border-green-100 flex flex-col items-center justify-center text-green-900/40 p-4 text-center">
-                      <Icons.Camera className="w-8 h-8 mb-2" />
-                      <span className="text-xs font-medium">Activity Photo</span>
-                    </div>
-                  ))}
+              {/* Gallery Images */}
+              {service.gallery && service.gallery.length > 0 && (
+                <div className="space-y-6">
+                  <h2 className="text-2xl font-display font-bold text-green-950">Practical Demonstration</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {service.gallery.map((imgSrc, i) => (
+                      <div key={i} className="relative aspect-[4/3] bg-cream rounded-2xl border border-green-100 overflow-hidden shadow-sm group">
+                        <Image
+                          src={imgSrc}
+                          alt={`${service.title} demonstration ${i + 1}`}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
 
             {/* Sidebar */}
