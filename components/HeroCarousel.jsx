@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const images = [
-  { src: "/hero-images/image 3.webp", position: "object-center" },
   { src: "/hero-images/image 24.webp", position: "object-top" }, // Often better for faces/people
   { src: "/hero-images/image 25.webp", position: "object-center" },
   { src: "/hero-images/image 14.webp", position: "object-center" },
