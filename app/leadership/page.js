@@ -12,6 +12,7 @@ export const metadata = {
 export default function LeadershipPage() {
   return (
     <main className="flex-1 flex flex-col bg-white">
+      {/* Hero */}
       <section className="bg-green-50 py-16 md:py-24 border-b border-green-100">
         <Container>
           <div className="max-w-3xl space-y-6">
@@ -23,7 +24,7 @@ export default function LeadershipPage() {
         </Container>
       </section>
 
-      {/* Executive Director */}
+      {/* Executive Director / Founder */}
       <section className="py-20 md:py-28">
         <Container>
           <div className="max-w-5xl mx-auto">
@@ -39,15 +40,19 @@ export default function LeadershipPage() {
               </div>
               <div className="md:col-span-2 space-y-6">
                 <div className="space-y-2">
+                  <span className="text-xs font-bold uppercase tracking-wider text-green-700">Executive Director</span>
                   <h2 className="text-3xl font-display font-bold text-green-950">John Kwamina Gyimah</h2>
-                  <p className="text-xl font-medium text-gold">Founder and Executive Director</p>
+                  <p className="text-xl font-medium text-gold">Founder & Executive Director</p>
                 </div>
-                <div className="prose prose-green max-w-none text-muted leading-relaxed">
+                <div className="prose prose-green max-w-none text-muted leading-relaxed text-lg">
                   <p>
-                    John Kwamina Gyimah is an agricultural extension and rural-development professional with more than 36 years of experience in research, extension, programme delivery and community development.
+                    John Kwamina Gyimah is an agricultural extension and rural development professional with more than 36 years of experience in research, agricultural extension advisory, programme delivery, and community development.
                   </p>
                   <p>
-                    His academic and professional background includes an MPhil in Agricultural Extension, a BSc in Agricultural Extension, postgraduate training in agricultural administration and participation in the Cochran Agricultural Fellowship Program in the United States.
+                    His academic and professional background includes an MPhil in Agricultural Extension, a BSc in Agricultural Extension, postgraduate training in agricultural administration, and participation in the Cochran Agricultural Fellowship Program in the United States. 
+                  </p>
+                  <p>
+                    Under his leadership, ARATC has successfully designed and executed livelihood skills interventions and agricultural consultancy assignments for international organizations, private sector groups, and government agencies.
                   </p>
                 </div>
               </div>
@@ -61,7 +66,7 @@ export default function LeadershipPage() {
         <Container>
           <SectionHeading 
             title="Board of Directors & Technical Team" 
-            subtitle="Our seven-member Board of Directors provides oversight and strategic direction, while our technical team manages project coordination, crops, animal production, and value chains."
+            subtitle="Our active Board of Directors provides strategic direction and compliance oversight, while our technical team manages project delivery and capacity building."
             centered
             className="mb-16 mx-auto"
           />
@@ -92,14 +97,25 @@ export default function LeadershipPage() {
             ))}
           </div>
 
-          {/* Board of Directors Note */}
-          <div className="max-w-2xl mx-auto bg-white/60 backdrop-blur-xs rounded-2xl p-6 border border-green-100 text-center shadow-xs">
-            <h3 className="text-lg font-bold text-green-950 mb-2 flex items-center justify-center gap-2">
-              <Icons.Users className="w-5 h-5 text-green-700" />
-              Board of Directors Profiles
+          {/* Board of Directors Details */}
+          <div className="max-w-3xl mx-auto bg-white rounded-3xl p-8 border border-green-100 text-center shadow-sm">
+            <h3 className="text-xl font-bold text-green-950 mb-4 flex items-center justify-center gap-2">
+              <Icons.Users className="w-6 h-6 text-green-700" />
+              Board of Directors
             </h3>
-            <p className="text-muted text-sm leading-relaxed">
-              Detailed profiles for our seven-member Board of Directors will be published here once their portfolios are officially confirmed by management.
+            <p className="text-muted text-base leading-relaxed max-w-2xl mx-auto mb-6">
+              ARATC is governed by a 7-member active Board of Directors comprising seasoned professionals with diverse expertise across key development sectors:
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm font-semibold text-green-900 text-left max-w-lg mx-auto">
+              <span className="flex items-center gap-2"><Icons.Check className="w-4.5 h-4.5 text-gold shrink-0" /> Agricultural Extension</span>
+              <span className="flex items-center gap-2"><Icons.Check className="w-4.5 h-4.5 text-gold shrink-0" /> Agribusiness</span>
+              <span className="flex items-center gap-2"><Icons.Check className="w-4.5 h-4.5 text-gold shrink-0" /> Microfinance</span>
+              <span className="flex items-center gap-2"><Icons.Check className="w-4.5 h-4.5 text-gold shrink-0" /> SME Development</span>
+              <span className="flex items-center gap-2"><Icons.Check className="w-4.5 h-4.5 text-gold shrink-0" /> Community Development</span>
+              <span className="flex items-center gap-2"><Icons.Check className="w-4.5 h-4.5 text-gold shrink-0" /> Strategic Governance</span>
+            </div>
+            <p className="text-xs text-green-900/60 mt-8 border-t border-green-50 pt-4">
+              The Board provides active oversight, ensures transparency, and maintains fiduciary standards for all projects and partnerships.
             </p>
           </div>
         </Container>

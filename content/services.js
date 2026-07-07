@@ -4,13 +4,13 @@ export const services = [
     slug: "sustainable-agriculture",
     title: "Sustainable Agriculture & Food Security",
     icon: "Sprout",
-    summary: "Climate-smart production, aquaculture, beekeeping, mushroom, snail, poultry, rabbit and grasscutter enterprises.",
-    description: "Our sustainable agriculture training equips farmers and community groups with practical skills in modern, climate-resilient farming techniques. We focus on low-barrier entry enterprises that provide quick returns and improve food security.",
+    summary: "Climate-smart agriculture, aquaculture, mushroom, snail, poultry, rabbit, grasscutter, beekeeping, urban agriculture, and cash crop plantation support.",
+    description: "We equip farmers and community groups with practical skills in modern, climate-resilient farming techniques. We focus on low-barrier entry agricultural enterprises that provide quick returns, improve household nutrition, and ensure long-term food security.",
     learningOutcomes: [
-      "Understand climate-smart agricultural practices",
-      "Master production techniques for selected enterprises",
-      "Develop farm management and record-keeping skills",
-      "Learn disease and pest control methods"
+      "Understand climate-smart agricultural practices and adaptation",
+      "Master production techniques for catfish, snails, and rabbits",
+      "Learn modern beekeeping, hive setup, and honey harvesting",
+      "Develop skills in pig farming using Indigenous Micro-Organism (IMO) technology"
     ],
     targetGroups: ["Farmers", "Cooperatives", "Youth groups", "Women's groups"],
     deliveryFormats: ["Group training", "Demonstration", "Site visit", "Technical assistance"],
@@ -25,17 +25,17 @@ export const services = [
   {
     id: "livelihood-skills",
     slug: "livelihood-skills",
-    title: "Livelihood & Skills Training",
+    title: "Livelihood & Enterprise Training",
     icon: "HandHeart",
-    summary: "Practical soap making, baking, gari processing, bead making and other practical income-generating activities.",
-    description: "We provide hands-on training in alternative livelihood skills designed to help individuals and groups build sustainable income streams independent of seasonal agriculture.",
+    summary: "Practical livelihood training for rural and disadvantaged groups, especially women and youth, with a focus on alternative income-generating ventures and entrepreneurship.",
+    description: "We provide hands-on training in alternative livelihood skills designed to help individuals and groups build sustainable income streams independent of seasonal agriculture. This includes production skills, safety protocols, packaging, and marketing.",
     learningOutcomes: [
-      "Master production techniques and safety protocols",
-      "Understand basic quality control and packaging",
-      "Develop enterprise management skills",
-      "Learn marketing and sales strategies"
+      "Master soap making (liquid and bar soap) and starter kit usage",
+      "Understand baking, confectionery, and food safety protocols",
+      "Learn product quality control, packaging, and branding",
+      "Establish micro-enterprises and basic cooperative structures"
     ],
-    targetGroups: ["Women's groups", "Youth", "Community organizations"],
+    targetGroups: ["Women's groups", "Youth", "Disadvantaged groups", "Community organizations"],
     deliveryFormats: ["Group training", "Demonstration", "Institutional training"],
     status: "published",
     image: "/gallery-images/soap-making-exhibition-graduation.webp",
@@ -48,83 +48,93 @@ export const services = [
   {
     id: "entrepreneurship",
     slug: "entrepreneurship",
-    title: "Entrepreneurship Development",
+    title: "Agribusiness & Value Chain Development",
     icon: "TrendingUp",
-    summary: "Enterprise formation, business development, market linkages and value-chain support.",
-    description: "Our entrepreneurship programmes help individuals turn agricultural and livelihood skills into viable, formal businesses. We guide participants through enterprise formation, financial literacy, and market access.",
+    summary: "M4P approach, value chain development, market linkages, business development services, supply chain support, and access-to-finance support.",
+    description: "Our agribusiness development services help local farmer groups and small agricultural enterprises scale up. Using the Making Markets Work for the Poor (M4P) approach, we strengthen value chains, improve access to inputs and finance, and build robust market linkages.",
     learningOutcomes: [
-      "Business planning and enterprise formation",
-      "Financial literacy and record keeping",
-      "Value chain analysis and market linkages",
-      "Access to finance and cooperative formation"
+      "Apply the M4P approach to local agricultural markets",
+      "Analyze production-to-market pathways across crops and livestock",
+      "Facilitate market linkages between smallholders and commercial buyers",
+      "Develop agribusiness plans and access-to-finance opportunities"
     ],
-    targetGroups: ["Agri-preneurs", "Cooperatives", "Small business owners"],
+    targetGroups: ["Agri-preneurs", "Cooperatives", "Small business owners", "Buyers and processors"],
     deliveryFormats: ["Workshop", "Consultancy", "Mentorship"],
     status: "published",
-    image: "/gallery-images/military-livelihood-classroom-training.webp",
+    image: "/gallery-images/community-workshop-laptop-presentation.webp",
     gallery: [
-      "/gallery-images/military-compost-rearing-training.webp",
-      "/gallery-images/military-partnership-award.webp",
-      "/gallery-images/community-workshop-laptop-presentation.webp"
+      "/gallery-images/community-agricultural-training-hall.webp",
+      "/gallery-images/nursery-potted-plants-training.webp",
+      "/gallery-images/aquaculture-fingerlings-presentation.webp"
+    ]
+  },
+  {
+    id: "farm-development",
+    slug: "farm-development",
+    title: "Agricultural Consultancy & Farm Development",
+    icon: "Briefcase",
+    summary: "Plantation establishment and management, modern oil palm and cassava processing, farm planning, feasibility studies, market analysis, and financial modeling.",
+    description: "We provide professional agricultural advisory and project development services. From large-scale oil palm plantation establishment to setting up modern agro-processing facilities for palm oil and cassava, we deliver technical expertise, feasibility studies, and financial modeling.",
+    learningOutcomes: [
+      "Plan large-scale cash crop plantation establishment and management",
+      "Design modern oil palm and cassava processing operations",
+      "Conduct feasibility studies and market analysis for farms",
+      "Develop financial models and capital/operating expenditure analyses"
+    ],
+    targetGroups: ["Commercial farmers", "Landowners", "Agro-processors", "Private investors"],
+    deliveryFormats: ["Consultancy", "Technical support", "Project management"],
+    status: "published",
+    image: "/gallery-images/nursery-potted-plants-training.webp",
+    gallery: [
+      "/gallery-images/pig-farming-concrete-pen.webp",
+      "/gallery-images/livestock-snail-pens-outdoor.webp",
+      "/gallery-images/beekeeping-hive-setup-farm.webp"
     ]
   },
   {
     id: "research-consultancy",
     slug: "research-consultancy",
-    title: "Research & Consultancy",
+    title: "Research, Monitoring & Evaluation",
     icon: "Search",
-    summary: "Feasibility studies, baseline surveys, project evaluation, farm planning, market analysis and monitoring.",
-    description: "We partner with institutions and development organizations to provide accurate, field-based research, monitoring, and evaluation services across the agricultural and rural development sectors.",
-    learningOutcomes: [],
+    summary: "Participatory research, baseline studies, feasibility studies, project appraisal, project evaluation, community engagement, and monitoring support.",
+    description: "We partner with international development agencies, government departments, and NGOs to provide robust research services. We specialize in participatory development methods, baseline surveys, project evaluations, and monitoring frameworks.",
+    learningOutcomes: [
+      "Design and execute baseline surveys and needs assessments",
+      "Develop Monitoring & Evaluation (M&E) project frameworks",
+      "Conduct participatory rural appraisals and community engagements",
+      "Deliver rigorous independent project appraisal and evaluations"
+    ],
     targetGroups: ["Development partners", "Government agencies", "Private sector", "NGOs"],
     deliveryFormats: ["Consultancy", "Technical support", "Project implementation"],
     status: "published",
     image: "/gallery-images/community-workshop-laptop-presentation.webp",
     gallery: [
-      "/gallery-images/community-agricultural-training-hall.webp",
       "/gallery-images/community-training-library.webp",
+      "/gallery-images/community-agricultural-training-hall.webp",
       "/gallery-images/aquaculture-fingerlings-presentation.webp"
-    ]
-  },
-  {
-    id: "private-sector",
-    slug: "private-sector",
-    title: "Private Sector & Market Systems",
-    icon: "Briefcase",
-    summary: "Value-chain development, M4P approaches, supply-chain support and community engagement for companies and partners.",
-    description: "We assist private sector companies in developing inclusive supply chains and delivering impactful Corporate Social Responsibility (CSR) programmes that genuinely benefit rural communities.",
-    learningOutcomes: [],
-    targetGroups: ["Agribusinesses", "Corporate CSR teams", "Buyers and processors"],
-    deliveryFormats: ["Consultancy", "Project delivery", "Community engagement"],
-    status: "published",
-    image: "/gallery-images/aquaculture-mobile-tanks-outdoor.webp",
-    gallery: [
-      "/gallery-images/aquaculture-mobile-tanks-farmers.webp",
-      "/gallery-images/nursery-potted-plants-training.webp",
-      "/gallery-images/livestock-snail-pens-outdoor.webp"
     ]
   },
   {
     id: "community-development",
     slug: "community-development",
-    title: "Environment & Community Development",
-    icon: "Users",
-    summary: "Climate adaptation, natural-resource livelihoods, health and sanitation, gender inclusion, youth participation.",
-    description: "Our community interventions focus on building overall resilience, addressing climate adaptation, promoting gender inclusion, and improving local governance and sanitation.",
+    title: "Environment & Climate Change Adaptation",
+    icon: "Leaf",
+    summary: "Natural resource-based livelihoods, climate resilience, sustainable production systems, gender equity, youth inclusion, local governance, health, and sanitation.",
+    description: "We work directly with rural communities to protect natural resources, build resilience against climate change impacts, promote gender equity and youth inclusion, and improve local sanitation and health governance systems.",
     learningOutcomes: [
-      "Community resource mapping and planning",
-      "Climate adaptation strategies",
-      "Gender mainstreaming and inclusion",
-      "WASH (Water, Sanitation and Hygiene) awareness"
+      "Design natural resource-based livelihood opportunities",
+      "Implement climate-resilience practices in local production",
+      "Incorporate gender mainstreaming and youth inclusion in projects",
+      "Support local water, sanitation, and health (WASH) initiatives"
     ],
-    targetGroups: ["Communities", "Local authorities", "Vulnerable populations"],
+    targetGroups: ["Communities", "Local authorities", "Vulnerable populations", "Farmer associations"],
     deliveryFormats: ["Community mobilization", "Workshop", "Project implementation"],
     status: "published",
-    image: "/gallery-images/community-agricultural-training-hall.webp",
+    image: "/gallery-images/ruminant-wooden-pen-outdoor.webp",
     gallery: [
-      "/gallery-images/community-training-library.webp",
       "/gallery-images/ruminant-rearing-sheep-goat-pen.webp",
-      "/gallery-images/ruminant-wooden-pen-outdoor.webp"
+      "/gallery-images/livestock-snail-pens-outdoor.webp",
+      "/gallery-images/community-training-library.webp"
     ]
   }
 ];

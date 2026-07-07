@@ -5,15 +5,17 @@ export const siteInfo = {
   registrationYear: "2019",
   tagline: "Practical knowledge. Stronger livelihoods. Resilient communities.",
   contact: {
-    address: "Apremdo, Western Region, Ghana",
-    gps: null, // "Pending confirmation"
-    phone: null, // "Pending confirmation"
-    email: null, // "Pending confirmation"
+    address: "E. Akuffo Addo Road, Apremdo New Market, Takoradi, Ghana",
+    postalAddress: "Post Office Box 254, Sekondi",
+    gps: "WK-593-8381",
+    contactPerson: "John Kwamina Gyimah",
+    phones: ["+233 249 724 496", "+233 200 733 59"],
+    emails: ["info.arattc@gmail.com", "johngyimah299@gmail.com"],
   },
   social: {
-    facebook: null,
+    facebook: "https://facebook.com/Arattc-Ghana",
+    instagram: "https://instagram.com/Arattc-Ghana",
+    linkedin: "https://linkedin.com/company/Arattc-Ghana",
     twitter: null,
-    linkedin: null,
-    instagram: null,
   }
 };

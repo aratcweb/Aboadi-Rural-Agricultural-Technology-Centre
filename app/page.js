@@ -21,7 +21,7 @@ export default function Home() {
               Empowering communities through agriculture, skills and enterprise
             </h1>
             <p className="text-lg md:text-xl !text-white max-w-2xl leading-relaxed drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] font-medium">
-              ARATC provides practical agricultural training, livelihood development, consultancy services and community-based programmes that help people build sustainable incomes and stronger communities.
+              ARATC is a Ghanaian non-profit organization delivering livelihood training, agricultural consultancy, plantation management, research, and agribusiness development to empower rural and disadvantaged communities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button href="/projects" variant="primary" size="lg" className="bg-[#16a34a] hover:bg-[#15803d] !text-white border-none shadow-lg">
@@ -65,11 +65,11 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <SectionHeading 
-                title="Experience rooted in communities" 
-                subtitle="Aboadi Rural Agricultural Technology Centre (ARATC) is a Ghanaian non-governmental, non-profit organization that delivers practical agricultural training, livelihood development, research and consultancy services."
+                title="Rooted in Community Livelihoods" 
+                subtitle="Aboadi Rural Agricultural Technology Centre (ARATC) is a non-governmental and non-profit organization legally registered in Ghana since 2019. We empower rural and disadvantaged communities through practical training, agribusiness development, and consultancy."
               />
               <p className="text-muted leading-relaxed">
-                Our work supports farmers, women, young people and institutions with skills and solutions that improve productivity, resilience and economic opportunity.
+                Our core expertise spans livelihood training, agricultural consultancy, plantation establishment and management, project appraisal and evaluation, research, and agribusiness development. Supported by a multidisciplinary staff of 12 and active strategic oversight from our 7-member Board of Directors, we deliver bottom-up, needs-based interventions across Ghana.
               </p>
               <Button href="/about" variant="secondary" className="mt-4">
                 About ARATC
@@ -132,20 +132,41 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Impact */}
+      {/* Impact & Achievements */}
       <section className="py-20 md:py-28 bg-green-900 text-white">
         <Container>
-          <div className="text-center max-w-2xl mx-auto space-y-6">
-            <h2 className="text-3xl md:text-4xl font-display font-bold">Making a visible impact</h2>
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-white">Making a Verifiable Impact</h2>
             <p className="text-green-100 text-lg">
-              We deliver evidence-based results through practical training, community engagement, and strong partnerships.
+              We deliver evidence-based outcomes across Ghana through targeted livelihood skills and sustainable agriculture interventions.
             </p>
-            {/* To be replaced with actual impact figures when confirmed */}
-            <div className="pt-8">
-              <Button href="/projects" variant="primary" className="bg-gold text-green-950 hover:bg-gold/90 border-none">
-                Read Our Impact Stories
-              </Button>
-            </div>
+          </div>
+          
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+            {[
+              { value: "385", label: "GLRSSMP Beneficiaries", desc: "Trained in soap, poultry, aquaculture, bees & ruminants" },
+              { value: "1,200", label: "Armed Forces Personnel", desc: "Trained in alternative livelihoods for retirement" },
+              { value: "75", label: "Farmers Trained", desc: "In Indigenous Micro-Organism (IMO) piggery systems" },
+              { value: "25", label: "Youth Jobs Created", desc: "Through grasscutter rearing and setup stocks" },
+              { value: "3", label: "Target Communities", desc: "Covered under Adum Banso expansion feasibility studies" }
+            ].map((stat, index) => (
+              <div 
+                key={index} 
+                className="bg-green-950/40 backdrop-blur-xs rounded-2xl p-6 border border-green-800/80 hover:border-gold/50 transition-all text-center flex flex-col justify-between"
+              >
+                <div>
+                  <span className="block text-4xl md:text-5xl font-extrabold text-gold font-display mb-2">{stat.value}</span>
+                  <span className="block text-sm font-bold text-white mb-2">{stat.label}</span>
+                </div>
+                <p className="text-xs text-green-100/70 leading-relaxed mt-2 text-balance">{stat.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Button href="/projects" variant="primary" className="bg-gold text-green-950 hover:bg-gold/90 border-none shadow-md">
+              Explore Our Project Portfolio
+            </Button>
           </div>
         </Container>
       </section>

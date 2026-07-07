@@ -18,7 +18,7 @@ The programme also included modules on basic financial literacy and cooperative 
 
 ARATC continues to deliver targeted livelihood support to women, youth, and vulnerable groups across the region.
     `,
-    image: null, // "requires-confirmation"
+    image: "/gallery-images/soap-making-exhibition-graduation.webp",
     relatedService: "livelihood-skills",
     status: "published"
   }

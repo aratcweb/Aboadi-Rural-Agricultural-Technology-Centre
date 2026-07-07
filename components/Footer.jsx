@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "./Container";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { siteInfo } from "@/content/site";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -52,10 +53,11 @@ export function Footer() {
             <ul className="space-y-4">
               {[
                 { name: "Sustainable Agriculture", href: "/services/sustainable-agriculture" },
-                { name: "Livelihood Skills", href: "/services/livelihood-skills" },
-                { name: "Entrepreneurship", href: "/services/entrepreneurship" },
-                { name: "Research & Consultancy", href: "/services/research-consultancy" },
-                { name: "Community Development", href: "/services/community-development" },
+                { name: "Livelihood Training", href: "/services/livelihood-skills" },
+                { name: "Agribusiness Development", href: "/services/entrepreneurship" },
+                { name: "Farm Consultancy", href: "/services/farm-development" },
+                { name: "Research & M&E", href: "/services/research-consultancy" },
+                { name: "Climate Adaptation", href: "/services/community-development" },
               ].map((item) => (
                 <li key={item.name}>
                   <Link href={item.href} className="text-sm hover:text-white transition-colors">
@@ -73,18 +75,22 @@ export function Footer() {
               <li className="flex items-start gap-3 text-sm">
                 <MapPin className="w-5 h-5 text-gold shrink-0 mt-0.5" />
                 <span>
-                  Apremdo, Western Region<br />
-                  Ghana<br />
-                  <span className="text-xs text-green-100/70 block mt-1">(Exact address pending confirmation)</span>
+                  {siteInfo.contact.address}<br />
+                  <span className="text-xs text-green-100/70 block mt-1">{siteInfo.contact.postalAddress}</span>
+                  <span className="text-xs text-green-100/70 block">GPS: {siteInfo.contact.gps}</span>
                 </span>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Phone className="w-5 h-5 text-gold shrink-0" />
-                <span>(Pending confirmation)</span>
+                <a href={`tel:${siteInfo.contact.phones[0].replace(/\s+/g, '')}`} className="hover:underline">
+                  {siteInfo.contact.phones[0]}
+                </a>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Mail className="w-5 h-5 text-gold shrink-0" />
-                <span>(Pending confirmation)</span>
+                <a href={`mailto:${siteInfo.contact.emails[0]}`} className="hover:underline">
+                  {siteInfo.contact.emails[0]}
+                </a>
               </li>
             </ul>
           </div>
