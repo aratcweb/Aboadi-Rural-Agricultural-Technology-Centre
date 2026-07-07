@@ -137,7 +137,7 @@ export default function PartnersPage() {
       <section className="py-24 bg-green-950 text-white text-center">
         <Container>
           <div className="max-w-3xl mx-auto space-y-6">
-            <h2 className="text-3xl md:text-4xl font-display font-bold">Partner with an experienced local organization</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-bold !text-white">Partner with an experienced local organization</h2>
             <p className="text-lg text-green-100 leading-relaxed">
               ARATC collaborates with development organizations, public institutions, companies and community structures to design and deliver practical agricultural, livelihood and rural-development interventions.
             </p>

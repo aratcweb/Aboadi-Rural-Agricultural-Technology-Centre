@@ -114,7 +114,7 @@ export default function ContactPage() {
                   <div className="w-12 h-12 rounded-2xl bg-green-900 flex items-center justify-center mb-6">
                     <Icons.Map className="w-6 h-6 text-gold" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Find Our Office</h3>
+                  <h3 className="text-xl font-bold !text-white mb-2">Find Our Office</h3>
                   <p className="text-sm text-green-100/80 leading-relaxed mb-4">
                     Our administrative headquarters is located at Apremdo New Market in the Effia-Kwesimintsim Municipal Assembly in the Western Region of Ghana.
                   </p>

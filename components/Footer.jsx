@@ -17,7 +17,7 @@ export function Footer() {
               <div className="bg-white p-2 rounded-lg inline-flex">
                 <Image src="/logo.png" alt="ARATC Logo" width={40} height={40} className="h-10 w-auto object-contain" />
               </div>
-              <h3 className="text-2xl font-bold text-white font-display">ARATC</h3>
+              <h3 className="text-2xl font-bold !text-white font-display">ARATC</h3>
             </div>
             <p className="text-sm text-green-100/80 font-medium">
               Aboadi Rural Agricultural Technology Centre
@@ -29,7 +29,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-6 uppercase tracking-wider text-sm">Explore</h4>
+            <h4 className="!text-white font-semibold mb-6 uppercase tracking-wider text-sm">Explore</h4>
             <ul className="space-y-4">
               {[
                 { name: "About Us", href: "/about" },
@@ -49,7 +49,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-white font-semibold mb-6 uppercase tracking-wider text-sm">Services</h4>
+            <h4 className="!text-white font-semibold mb-6 uppercase tracking-wider text-sm">Services</h4>
             <ul className="space-y-4">
               {[
                 { name: "Sustainable Agriculture", href: "/services/sustainable-agriculture" },
@@ -70,7 +70,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-semibold mb-6 uppercase tracking-wider text-sm">Contact Us</h4>
+            <h4 className="!text-white font-semibold mb-6 uppercase tracking-wider text-sm">Contact Us</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm">
                 <MapPin className="w-5 h-5 text-gold shrink-0 mt-0.5" />

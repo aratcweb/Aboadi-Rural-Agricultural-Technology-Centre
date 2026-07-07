@@ -90,7 +90,7 @@ export default function ServicesDirectoryPage() {
       <section className="py-20 bg-green-950 text-white text-center">
         <Container>
           <div className="max-w-2xl mx-auto space-y-6">
-            <h2 className="text-3xl font-display font-bold">Need a Custom Programme?</h2>
+            <h2 className="text-3xl font-display font-bold !text-white">Need a Custom Programme?</h2>
             <p className="text-green-100 text-lg">
               We can adapt our training modules for specific community groups, women and youth programmes, or institutional development projects.
             </p>

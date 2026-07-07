@@ -159,14 +159,14 @@ export default async function ProjectCaseStudyPage({ params }) {
             {/* Sidebar Results */}
             <div className="space-y-8">
               <div className="bg-green-950 text-white rounded-3xl p-8 shadow-lg">
-                <h3 className="text-xl font-display font-bold mb-6 text-gold flex items-center gap-2">
+                <h3 className="text-xl font-display font-bold mb-6 !text-gold flex items-center gap-2">
                   <Icons.TrendingUp className="w-6 h-6" />
                   Verified Results
                 </h3>
                 
                 <div className="space-y-8">
                   <div>
-                    <h4 className="text-sm font-semibold uppercase tracking-wider text-green-100/70 mb-3">Outputs</h4>
+                    <h4 className="text-sm font-semibold uppercase tracking-wider !text-green-100/70 mb-3">Outputs</h4>
                     <ul className="space-y-3">
                       {project.outputs.map((output, i) => (
                         <li key={i} className="flex items-start gap-3">
@@ -178,7 +178,7 @@ export default async function ProjectCaseStudyPage({ params }) {
                   </div>
 
                   <div className="pt-6 border-t border-green-900/50">
-                    <h4 className="text-sm font-semibold uppercase tracking-wider text-green-100/70 mb-3">Outcomes</h4>
+                    <h4 className="text-sm font-semibold uppercase tracking-wider !text-green-100/70 mb-3">Outcomes</h4>
                     <ul className="space-y-3">
                       {project.outcomes.map((outcome, i) => (
                         <li key={i} className="flex items-start gap-3">

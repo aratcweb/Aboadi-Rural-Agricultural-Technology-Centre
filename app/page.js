@@ -136,7 +136,7 @@ export default function Home() {
       <section className="py-20 md:py-28 bg-green-900 text-white">
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-white">Making a Verifiable Impact</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-bold !text-white">Making a Verifiable Impact</h2>
             <p className="text-green-100 text-lg">
               We deliver evidence-based outcomes across Ghana through targeted livelihood skills and sustainable agriculture interventions.
             </p>
@@ -221,7 +221,7 @@ export default function Home() {
       <section className="py-24 md:py-32 bg-green-950 text-center px-4">
         <Container>
           <div className="max-w-3xl mx-auto space-y-8">
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-white text-balance">
+            <h2 className="text-3xl md:text-5xl font-display font-bold !text-white text-balance">
               Let us build practical solutions together
             </h2>
             <p className="text-lg text-green-100 text-balance leading-relaxed">

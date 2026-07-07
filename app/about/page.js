@@ -127,8 +127,8 @@ export default function AboutPage() {
                 <div className="inline-flex p-3 bg-green-900 rounded-xl">
                   <Icons.Eye className="w-8 h-8 text-gold" />
                 </div>
-                <h2 className="text-3xl font-display font-bold">Our Vision</h2>
-                <p className="text-green-100 text-lg leading-relaxed">
+                <h2 className="text-3xl font-display font-bold !text-white">Our Vision</h2>
+                <p className="text-green-105 text-lg leading-relaxed">
                   To be a first-class organization in improving the living conditions of rural and poor communities.
                 </p>
               </div>
@@ -137,8 +137,8 @@ export default function AboutPage() {
                 <div className="inline-flex p-3 bg-green-900 rounded-xl">
                   <Icons.Target className="w-8 h-8 text-gold" />
                 </div>
-                <h2 className="text-3xl font-display font-bold">Our Mission</h2>
-                <p className="text-green-100 text-lg leading-relaxed">
+                <h2 className="text-3xl font-display font-bold !text-white">Our Mission</h2>
+                <p className="text-green-105 text-lg leading-relaxed">
                   ARATC seeks to empower the rural poor and disadvantaged by providing the means, strategies, and products that enhance their economic and social endeavors and assist them to overcome challenging situations with enthusiasm.
                 </p>
               </div>
@@ -147,12 +147,12 @@ export default function AboutPage() {
             {/* Corporate Objectives */}
             <div className="bg-green-900/40 rounded-3xl p-8 border border-green-900 space-y-6 flex flex-col justify-between">
               <div>
-                <h2 className="text-3xl font-display font-bold mb-4">Corporate Objective</h2>
+                <h2 className="text-3xl font-display font-bold !text-white mb-4">Corporate Objective</h2>
                 <p className="text-green-100 text-lg leading-relaxed mb-6">
                   To promote and ensure sustainable development in Africa, particularly Ghana.
                 </p>
                 
-                <h3 className="text-lg font-bold text-gold uppercase tracking-wider mb-4">Specific Objectives</h3>
+                <h3 className="text-lg font-bold !text-gold uppercase tracking-wider mb-4">Specific Objectives</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <Icons.CheckCircle2 className="w-5 h-5 text-gold shrink-0 mt-0.5" />
