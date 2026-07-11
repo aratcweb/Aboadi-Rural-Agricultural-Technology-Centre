@@ -103,8 +103,8 @@ export default function LeadershipPage() {
               <Icons.Users className="w-6 h-6 text-green-700" />
               Board of Directors
             </h3>
-            <p className="text-muted text-base leading-relaxed max-w-2xl mx-auto mb-6">
-              ARATC is governed by a 7-member active Board of Directors comprising seasoned professionals with diverse expertise across key development sectors:
+            <p className="text-muted text-base leading-relaxed max-w-2xl mx-auto mb-6 font-medium">
+              ARATC has an active seven-member Board of Directors. The Board includes professionals with experience in Agricultural Extension, Agribusiness, Microfinance, Small and Medium Enterprise development, and Community Development, and takes an active oversight role in the strategic running and performance of the organization.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm font-semibold text-green-900 text-left max-w-lg mx-auto">
               <span className="flex items-center gap-2"><Icons.Check className="w-4.5 h-4.5 text-gold shrink-0" /> Agricultural Extension</span>
@@ -112,11 +112,7 @@ export default function LeadershipPage() {
               <span className="flex items-center gap-2"><Icons.Check className="w-4.5 h-4.5 text-gold shrink-0" /> Microfinance</span>
               <span className="flex items-center gap-2"><Icons.Check className="w-4.5 h-4.5 text-gold shrink-0" /> SME Development</span>
               <span className="flex items-center gap-2"><Icons.Check className="w-4.5 h-4.5 text-gold shrink-0" /> Community Development</span>
-              <span className="flex items-center gap-2"><Icons.Check className="w-4.5 h-4.5 text-gold shrink-0" /> Strategic Governance</span>
             </div>
-            <p className="text-xs text-green-900/60 mt-8 border-t border-green-50 pt-4">
-              The Board provides active oversight, ensures transparency, and maintains fiduciary standards for all projects and partnerships.
-            </p>
           </div>
         </Container>
       </section>

@@ -52,12 +52,12 @@ export function Footer() {
             <h4 className="!text-white font-semibold mb-6 uppercase tracking-wider text-sm">Services</h4>
             <ul className="space-y-4">
               {[
-                { name: "Sustainable Agriculture", href: "/services/sustainable-agriculture" },
-                { name: "Livelihood Training", href: "/services/livelihood-skills" },
-                { name: "Agribusiness Development", href: "/services/entrepreneurship" },
-                { name: "Farm Consultancy", href: "/services/farm-development" },
-                { name: "Research & M&E", href: "/services/research-consultancy" },
-                { name: "Climate Adaptation", href: "/services/community-development" },
+                { name: "Sustainable Agriculture & Food Security", href: "/services/sustainable-agriculture" },
+                { name: "Entrepreneurship & Economic Empowerment", href: "/services/livelihood-skills" },
+                { name: "Private Sector & Market Systems", href: "/services/entrepreneurship" },
+                { name: "Environment & Climate Change Adaptation", href: "/services/community-development" },
+                { name: "Cross-Cutting Sectors & Research", href: "/services/research-consultancy" },
+                { name: "Agricultural Consultancy & Farm Development", href: "/services/farm-development" },
               ].map((item) => (
                 <li key={item.name}>
                   <Link href={item.href} className="text-sm hover:text-white transition-colors">

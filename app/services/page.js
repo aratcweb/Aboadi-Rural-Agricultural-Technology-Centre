@@ -26,11 +26,11 @@ export default function ServicesDirectoryPage() {
         </Container>
       </section>
 
-      {/* Services List */}
+      {/* Primary Services List */}
       <section className="py-20 md:py-28">
         <Container>
           <div className="space-y-16 lg:space-y-24">
-            {services.map((service, index) => {
+            {services.filter(s => s.type === "primary").map((service, index) => {
               const Icon = Icons[service.icon] || Icons.CheckCircle;
               const isEven = index % 2 === 1;
 
@@ -78,6 +78,42 @@ export default function ServicesDirectoryPage() {
                         Request Training
                       </Button>
                     </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </Container>
+      </section>
+
+      {/* Supporting Capabilities */}
+      <section className="py-20 bg-green-50/50 border-t border-b border-green-100">
+        <Container>
+          <SectionHeading 
+            title="Supporting Capabilities" 
+            subtitle="Additional professional advisory and technical consultancy services offered by ARATC."
+            centered
+            className="mb-12 mx-auto"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {services.filter(s => s.type === "supporting").map((service) => {
+              const Icon = Icons[service.icon] || Icons.CheckCircle;
+              return (
+                <div key={service.id} className="bg-white p-8 rounded-3xl border border-green-100 hover:shadow-md transition-shadow flex flex-col h-full">
+                  <div className="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-6">
+                    <Icon className="w-6 h-6 text-green-700" />
+                  </div>
+                  <h3 className="text-xl font-bold text-green-950 mb-3">{service.title}</h3>
+                  <p className="text-sm text-muted leading-relaxed mb-6 flex-1">
+                    {service.description}
+                  </p>
+                  <div className="pt-4 flex gap-4 mt-auto">
+                    <Button href={`/services/${service.slug}`} variant="primary" size="sm">
+                      View Details
+                    </Button>
+                    <Button href={`/contact?type=request-training&service=${service.slug}`} variant="outline" size="sm">
+                      Request Advisory
+                    </Button>
                   </div>
                 </div>
               );
