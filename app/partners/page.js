@@ -43,7 +43,7 @@ export default function PartnersPage() {
                   { name: "Rainforest Alliance", logo: "/partners/rainforest_alliance.svg" },
                   { name: "Cocoa Life", logo: "/partners/cocoa_life.svg" },
                   { name: "UNDP", logo: "/partners/undp.svg" },
-                  { name: "Solidaridad", logo: "/partners/solidaridad.png" },
+                  { name: "Solidaridad", logo: "/partners/solidaridad.svg" },
                   { name: "FAO", logo: "/partners/fao.svg" },
                   { name: "World Bank", logo: "/partners/world_bank.svg" },
                   { name: "Mondelez", logo: "/partners/mondelez.svg" }
@@ -72,10 +72,10 @@ export default function PartnersPage() {
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
-                  { name: "Ministry of Food and Agriculture (MoFA)", logo: "/partners/ministry_of_food_and_agriculture_mofa.svg" },
-                  { name: "Environmental Protection Agency (EPA)", logo: "/partners/environmental_protection_agency_epa.svg" },
+                  { name: "Ministry of Food and Agriculture (MoFA)", logo: "/partners/ministry_of_food_and_agriculture_mofa.png" },
+                  { name: "Environmental Protection Agency (EPA)", logo: "/partners/environmental_protection_agency_epa.jpg" },
                   { name: "Ghana Enterprise Agency", logo: "/partners/ghana_enterprise_agency.svg" },
-                  { name: "Ghana Armed Forces (Resettlement Directorate)", logo: "/partners/ghana_armed_forces_resettlement_directorate.svg" }
+                  { name: "Ghana Armed Forces (Resettlement Directorate)", logo: "/partners/ghana_armed_forces_resettlement_directorate.png" }
                 ].map((partner) => (
                   <div key={partner.name} className="h-36 bg-white rounded-2xl border border-green-100 shadow-xs flex flex-col items-center justify-center p-6 text-center hover:border-green-300 hover:shadow-md transition-all duration-300 gap-3 group">
                     <div className="relative w-full h-14 flex items-center justify-center">
@@ -129,8 +129,8 @@ export default function PartnersPage() {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
-                  { name: "Sekondi-Takoradi Metropolitan Assembly (STMA)", logo: "/partners/sekondi_takoradi_metropolitan_assembly_stma.svg" },
-                  { name: "Effia Kwesimintsim Municipal Assembly (EKMA)", logo: "/partners/effia_kwesimintsim_municipal_assembly_ekma.svg" }
+                  { name: "Sekondi-Takoradi Metropolitan Assembly (STMA)", logo: "/partners/sekondi_takoradi_metropolitan_assembly_stma.jpg" },
+                  { name: "Effia Kwesimintsim Municipal Assembly (EKMA)", logo: "/partners/effia_kwesimintsim_municipal_assembly_ekma.jpg" }
                 ].map((partner) => (
                   <div key={partner.name} className="h-36 bg-white rounded-2xl border border-green-100 shadow-xs flex flex-col items-center justify-center p-6 text-center hover:border-green-300 hover:shadow-md transition-all duration-300 gap-3 group">
                     <div className="relative w-full h-14 flex items-center justify-center">
