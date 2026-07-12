@@ -78,8 +78,8 @@ export default function Home() {
             {/* Experience Image */}
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-green-100 shadow-lg">
               <Image 
-                src="/image 28.webp" 
-                alt="ARATC Experience rooted in communities"
+                src="/management-meeting.webp" 
+                alt="ARATC Board of Directors and management meeting"
                 fill
                 className="object-cover"
               />

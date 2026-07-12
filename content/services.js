@@ -17,8 +17,13 @@ export const services = [
     targetGroups: ["Rural farmers", "Agricultural cooperatives", "Women's groups", "Youth groups"],
     deliveryFormats: ["Practical demonstrations", "Group training workshops", "Technical mentorship", "On-site consultancies"],
     status: "published",
-    image: "/gallery-images/aquaculture-releasing-fingerlings.webp",
+    image: "/gallery-images/aquaculture-tarpaulin-tanks-training.webp",
     gallery: [
+      "/gallery-images/catfish-built-tank.webp",
+      "/gallery-images/snail-farming.webp",
+      "/gallery-images/coconut-shell-carbonization-site.webp",
+      "/gallery-images/aquaculture-mobile-tanks-advisory.webp",
+      "/gallery-images/aquaculture-releasing-fingerlings.webp",
       "/gallery-images/aquaculture-tarpaulin-tanks.webp",
       "/gallery-images/beekeeping-hive-setup-farm.webp",
       "/gallery-images/pig-farming-concrete-pen.webp"
@@ -118,6 +123,34 @@ export const services = [
       "/gallery-images/community-training-library.webp",
       "/gallery-images/community-agricultural-training-hall.webp",
       "/gallery-images/aquaculture-fingerlings-presentation.webp"
+    ]
+  },
+  {
+    id: "retirement-seminars",
+    slug: "retirement-seminars",
+    title: "Retirement Planning Seminars",
+    icon: "Presentation",
+    type: "primary",
+    summary: "Pre-retirement preparation, wealth management, health guidance, and alternative livelihood training for public and private sector employees.",
+    description: "We deliver structured pre-retirement seminars designed to prepare employees for a secure and active retirement. Working with institutions such as the Ghana Revenue Authority (GRA), we combine financial literacy, estate planning, and mental health preparation with practical training in profitable micro-enterprises like agriculture and soap-making.",
+    learningOutcomes: [
+      "Develop post-retirement wealth management and investment plans",
+      "Explore high-yield agribusiness and alternative livelihood options",
+      "Navigate psychological transitions and lifestyle adjustments after active service",
+      "Acquire practical knowledge on estate planning, legal matters, and wellness"
+    ],
+    targetGroups: ["Public sector workers", "Corporate employees", "Pre-retirees", "Institutional senior staff"],
+    deliveryFormats: ["Interactive workshops", "Seminars & presentations", "Group advisory & coaching sessions"],
+    status: "published",
+    image: "/gallery-images/retirement-seminar-presentation.webp",
+    gallery: [
+      "/gallery-images/retirement-seminar-customs.webp",
+      "/gallery-images/retirement-seminar-military-camo.webp",
+      "/gallery-images/retirement-seminar-military-navy.webp",
+      "/gallery-images/retirement-seminar-police-seminar.webp",
+      "/gallery-images/retirement-seminar-police-classroom.webp",
+      "/gallery-images/retirement-seminar-mixed-officers.webp",
+      "/gallery-images/retirement-seminar-security-forces.webp"
     ]
   },
   {

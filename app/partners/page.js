@@ -2,7 +2,6 @@ import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
 import * as Icons from "lucide-react";
-import Image from "next/image";
 
 export const metadata = {
   title: "Partners & Collaborators",
@@ -39,26 +38,17 @@ export default function PartnersPage() {
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
-                  { name: "World Vision International", logo: "/partners/world_vision_international.svg" },
-                  { name: "Rainforest Alliance", logo: "/partners/rainforest_alliance.svg" },
-                  { name: "Cocoa Life", logo: "/partners/cocoa_life.svg" },
-                  { name: "UNDP", logo: "/partners/undp.svg" },
-                  { name: "Solidaridad", logo: "/partners/solidaridad.svg" },
-                  { name: "FAO", logo: "/partners/fao.svg" },
-                  { name: "World Bank", logo: "/partners/world_bank.svg" },
-                  { name: "Mondelez", logo: "/partners/mondelez.svg" }
+                  "World Vision International",
+                  "Rainforest Alliance",
+                  "Cocoa Life",
+                  "UNDP",
+                  "Solidaridad",
+                  "FAO",
+                  "World Bank",
+                  "Mondelez"
                 ].map((partner) => (
-                  <div key={partner.name} className="h-36 bg-white rounded-2xl border border-green-100 shadow-xs flex flex-col items-center justify-center p-6 text-center hover:border-green-300 hover:shadow-md transition-all duration-300 gap-3 group">
-                    <div className="relative w-full h-14 flex items-center justify-center">
-                      <Image 
-                        src={partner.logo} 
-                        alt={`${partner.name} Logo`} 
-                        width={140}
-                        height={56}
-                        className="max-h-full w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                      />
-                    </div>
-                    <span className="font-semibold text-green-900/60 text-xs group-hover:text-green-900 transition-colors">{partner.name}</span>
+                  <div key={partner} className="h-32 bg-white rounded-2xl border border-green-100 shadow-xs flex items-center justify-center p-6 text-center hover:border-green-300 transition-colors">
+                    <span className="font-semibold text-green-900/80 text-sm">{partner}</span>
                   </div>
                 ))}
               </div>
@@ -72,22 +62,13 @@ export default function PartnersPage() {
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
-                  { name: "Ministry of Food and Agriculture (MoFA)", logo: "/partners/ministry_of_food_and_agriculture_mofa.png" },
-                  { name: "Environmental Protection Agency (EPA)", logo: "/partners/environmental_protection_agency_epa.jpg" },
-                  { name: "Ghana Enterprise Agency", logo: "/partners/ghana_enterprise_agency.svg" },
-                  { name: "Ghana Armed Forces (Resettlement Directorate)", logo: "/partners/ghana_armed_forces_resettlement_directorate.png" }
+                  "Ministry of Food and Agriculture (MoFA)",
+                  "Environmental Protection Agency (EPA)",
+                  "Ghana Enterprise Agency",
+                  "Ghana Armed Forces (Resettlement Directorate)"
                 ].map((partner) => (
-                  <div key={partner.name} className="h-36 bg-white rounded-2xl border border-green-100 shadow-xs flex flex-col items-center justify-center p-6 text-center hover:border-green-300 hover:shadow-md transition-all duration-300 gap-3 group">
-                    <div className="relative w-full h-14 flex items-center justify-center">
-                      <Image 
-                        src={partner.logo} 
-                        alt={`${partner.name} Logo`} 
-                        width={140}
-                        height={56}
-                        className="max-h-full w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                      />
-                    </div>
-                    <span className="font-semibold text-green-900/60 text-xs group-hover:text-green-900 transition-colors">{partner.name}</span>
+                  <div key={partner} className="h-32 bg-white rounded-2xl border border-green-100 shadow-xs flex items-center justify-center p-6 text-center hover:border-green-300 transition-colors">
+                    <span className="font-semibold text-green-900/80 text-sm">{partner}</span>
                   </div>
                 ))}
               </div>
@@ -101,21 +82,12 @@ export default function PartnersPage() {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {[
-                  { name: "Benso Oil Palm Plantation (BOPP)", logo: "/partners/benso_oil_palm_plantation_bopp.svg" },
-                  { name: "OLAM", logo: "/partners/olam.svg" },
-                  { name: "Plantation Socfinaf Ghana", logo: "/partners/plantation_socfinaf_ghana.svg" }
+                  "Benso Oil Palm Plantation (BOPP)",
+                  "OLAM",
+                  "Plantation Socfinaf Ghana"
                 ].map((partner) => (
-                  <div key={partner.name} className="h-36 bg-white rounded-2xl border border-green-100 shadow-xs flex flex-col items-center justify-center p-6 text-center hover:border-green-300 hover:shadow-md transition-all duration-300 gap-3 group">
-                    <div className="relative w-full h-14 flex items-center justify-center">
-                      <Image 
-                        src={partner.logo} 
-                        alt={`${partner.name} Logo`} 
-                        width={140}
-                        height={56}
-                        className="max-h-full w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                      />
-                    </div>
-                    <span className="font-semibold text-green-900/60 text-xs group-hover:text-green-900 transition-colors">{partner.name}</span>
+                  <div key={partner} className="h-32 bg-white rounded-2xl border border-green-100 shadow-xs flex items-center justify-center p-6 text-center hover:border-green-300 transition-colors">
+                    <span className="font-semibold text-green-900/80 text-sm">{partner}</span>
                   </div>
                 ))}
               </div>
@@ -129,20 +101,11 @@ export default function PartnersPage() {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
-                  { name: "Sekondi-Takoradi Metropolitan Assembly (STMA)", logo: "/partners/sekondi_takoradi_metropolitan_assembly_stma.jpg" },
-                  { name: "Effia Kwesimintsim Municipal Assembly (EKMA)", logo: "/partners/effia_kwesimintsim_municipal_assembly_ekma.jpg" }
+                  "Sekondi-Takoradi Metropolitan Assembly (STMA)",
+                  "Effia Kwesimintsim Municipal Assembly (EKMA)"
                 ].map((partner) => (
-                  <div key={partner.name} className="h-36 bg-white rounded-2xl border border-green-100 shadow-xs flex flex-col items-center justify-center p-6 text-center hover:border-green-300 hover:shadow-md transition-all duration-300 gap-3 group">
-                    <div className="relative w-full h-14 flex items-center justify-center">
-                      <Image 
-                        src={partner.logo} 
-                        alt={`${partner.name} Logo`} 
-                        width={140}
-                        height={56}
-                        className="max-h-full w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                      />
-                    </div>
-                    <span className="font-semibold text-green-900/60 text-xs group-hover:text-green-900 transition-colors">{partner.name}</span>
+                  <div key={partner} className="h-32 bg-white rounded-2xl border border-green-100 shadow-xs flex items-center justify-center p-6 text-center hover:border-green-300 transition-colors">
+                    <span className="font-semibold text-green-900/80 text-sm">{partner}</span>
                   </div>
                 ))}
               </div>
