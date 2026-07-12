@@ -47,10 +47,10 @@ export const services = [
     status: "published",
     image: "/gallery-images/soap-making-exhibition-graduation.webp",
     gallery: [
-      "/gallery-images/fish-smoking.webp",
       "/gallery-images/soap-making-starter-kits-truck.webp",
       "/gallery-images/soap-making-practical-mixing.webp",
-      "/gallery-images/soap-making-pouring-molds.webp"
+      "/gallery-images/soap-making-pouring-molds.webp",
+      "/gallery-images/fish-smoking.webp"
     ]
   },
   {
