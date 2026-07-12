@@ -73,7 +73,6 @@ export const services = [
     image: "/gallery-images/community-workshop-laptop-presentation.webp",
     gallery: [
       "/gallery-images/community-agricultural-training-hall.webp",
-      "/gallery-images/nursery-potted-plants-training.webp",
       "/gallery-images/aquaculture-fingerlings-presentation.webp"
     ]
   },
