@@ -24,7 +24,6 @@ export const services = [
       "/gallery-images/coconut-shell-carbonization-site.webp",
       "/gallery-images/aquaculture-mobile-tanks-advisory.webp",
       "/gallery-images/aquaculture-releasing-fingerlings.webp",
-      "/gallery-images/aquaculture-tarpaulin-tanks.webp",
       "/gallery-images/beekeeping-hive-setup-farm.webp",
       "/gallery-images/pig-farming-concrete-pen.webp"
     ]
