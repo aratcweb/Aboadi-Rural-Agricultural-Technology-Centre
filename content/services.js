@@ -96,7 +96,6 @@ export const services = [
     image: "/gallery-images/ruminant-wooden-pen-outdoor.webp",
     gallery: [
       "/gallery-images/ruminant-rearing-sheep-goat-pen.webp",
-      "/gallery-images/livestock-snail-pens-outdoor.webp",
       "/gallery-images/community-training-library.webp"
     ]
   },
