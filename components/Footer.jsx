@@ -58,6 +58,7 @@ export function Footer() {
                 { name: "Environment & Climate Change Adaptation", href: "/services/community-development" },
                 { name: "Cross-Cutting Sectors & Research", href: "/services/research-consultancy" },
                 { name: "Agricultural Consultancy & Farm Development", href: "/services/farm-development" },
+                { name: "Retirement Planning Seminars", href: "/services/retirement-seminars" },
               ].map((item) => (
                 <li key={item.name}>
                   <Link href={item.href} className="text-sm hover:text-white transition-colors">
