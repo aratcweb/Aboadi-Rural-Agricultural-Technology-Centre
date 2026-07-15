@@ -6,6 +6,9 @@ import * as Icons from "lucide-react";
 export const metadata = {
   title: "Partners & Collaborators",
   description: "Organizations ARATC has worked with through selected projects and assignments.",
+  alternates: {
+    canonical: "/partners",
+  },
 };
 
 export default function PartnersPage() {

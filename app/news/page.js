@@ -7,6 +7,9 @@ import Link from "next/link";
 export const metadata = {
   title: "News & Stories",
   description: "Updates, beneficiary stories, agricultural guidance, and organizational news from ARATC.",
+  alternates: {
+    canonical: "/news",
+  },
 };
 
 export default function NewsPage() {

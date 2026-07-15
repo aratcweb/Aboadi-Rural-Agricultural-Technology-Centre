@@ -7,6 +7,9 @@ import { teamMembers } from "@/content/team";
 export const metadata = {
   title: "Leadership & Team",
   description: "Meet the Founder, Executive Director, Board of Directors and technical team at ARATC.",
+  alternates: {
+    canonical: "/leadership",
+  },
 };
 
 export default function LeadershipPage() {

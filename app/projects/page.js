@@ -9,6 +9,9 @@ import Image from "next/image";
 export const metadata = {
   title: "Projects & Impact",
   description: "Explore ARATC's practical interventions and the results we deliver for farmers, women, youth and communities.",
+  alternates: {
+    canonical: "/projects",
+  },
 };
 
 export default function ProjectsPage() {

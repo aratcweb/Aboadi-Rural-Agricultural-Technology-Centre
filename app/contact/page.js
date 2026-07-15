@@ -8,6 +8,9 @@ import { siteInfo } from "@/content/site";
 export const metadata = {
   title: "Contact Us",
   description: "Get in touch with ARATC for training requests, consultancy, research, or partnership opportunities.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

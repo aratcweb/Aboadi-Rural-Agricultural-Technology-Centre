@@ -3,6 +3,9 @@ import { Container } from "@/components/Container";
 export const metadata = {
   title: "Privacy Policy",
   description: "Privacy policy and data handling practices for ARATC.",
+  alternates: {
+    canonical: "/privacy",
+  },
 };
 
 export default function PrivacyPage() {

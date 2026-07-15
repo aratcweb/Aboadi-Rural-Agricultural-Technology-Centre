@@ -1,10 +1,7 @@
 import { services } from "@/content/services";
 import { projects } from "@/content/projects";
 import { news } from "@/content/news";
-
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://www.aboadiruralagriculturaltechnologycentre.com";
+import { siteUrl } from "@/content/site";
 
 const baseUrl = siteUrl.replace(/\/$/, "");
 const lastModified = new Date("2026-06-27");

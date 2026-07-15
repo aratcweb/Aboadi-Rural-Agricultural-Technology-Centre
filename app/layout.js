@@ -1,5 +1,6 @@
 import { Inter, Merriweather } from "next/font/google";
 import "./globals.css";
+import { siteUrl } from "@/content/site";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -14,12 +15,11 @@ const merriweather = Merriweather({
   display: "swap",
 });
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://www.aboadiruralagriculturaltechnologycentre.com";
-
 export const metadata = {
   metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: "/",
+  },
   title: {
     template: "%s | Aboadi Rural Agricultural Technology Centre (ARATC)",
     default: "Aboadi Rural Agricultural Technology Centre (ARATC) | Practical Agriculture & Livelihood Training",

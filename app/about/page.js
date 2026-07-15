@@ -8,6 +8,9 @@ import { teamMembers } from "@/content/team";
 export const metadata = {
   title: "About Us",
   description: "Learn about Aboadi Rural Agricultural Technology Centre (ARATC), our history, vision, mission, and governance.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {

@@ -1,6 +1,4 @@
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://www.aboadiruralagriculturaltechnologycentre.com";
+import { siteUrl } from "@/content/site";
 
 const baseUrl = siteUrl.replace(/\/$/, "");
 

@@ -23,6 +23,9 @@ export async function generateMetadata({ params }) {
   return {
     title: project.title,
     description: project.challenge,
+    alternates: {
+      canonical: `/projects/${slug}`,
+    },
   };
 }
 

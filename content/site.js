@@ -1,3 +1,7 @@
+export const siteUrl = (
+  process.env.NEXT_PUBLIC_SITE_URL || "https://arattc.org"
+).replace(/\/$/, "");
+
 export const siteInfo = {
   name: "Aboadi Rural Agricultural Technology Centre",
   shortName: "ARATC",

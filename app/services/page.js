@@ -9,6 +9,9 @@ import Image from "next/image";
 export const metadata = {
   title: "What We Do - Services & Training",
   description: "ARATC provides practical training and support in sustainable agriculture, livelihood skills, entrepreneurship, research and community development.",
+  alternates: {
+    canonical: "/services",
+  },
 };
 
 export default function ServicesDirectoryPage() {

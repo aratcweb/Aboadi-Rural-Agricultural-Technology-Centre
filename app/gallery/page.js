@@ -4,6 +4,9 @@ import { GalleryGrid } from "@/components/GalleryGrid";
 export const metadata = {
   title: "Media Gallery",
   description: "Explore photographs of ARATC's practical agricultural training, livelihood skills, and community outreach projects.",
+  alternates: {
+    canonical: "/gallery",
+  },
 };
 
 export default function GalleryPage() {
