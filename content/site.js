@@ -17,7 +17,7 @@ export const siteInfo = {
     emails: ["info.arattc@gmail.com", "johngyimah299@gmail.com"],
   },
   social: {
-    facebook: "https://facebook.com/Arattc-Ghana",
+    facebook: "https://www.facebook.com/profile.php?id=61588762550790&mibextid=wwXIfr&mibextid=wwXIfr",
     instagram: "https://www.instagram.com/info.arattc?igsh=M20wcjV3dW11dmcw&utm_source=qr",
     linkedin: "https://linkedin.com/company/Arattc-Ghana",
     twitter: null,
