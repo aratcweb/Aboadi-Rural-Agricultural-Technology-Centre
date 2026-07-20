@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "./Container";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { FacebookIcon, InstagramIcon, LinkedinIcon, TwitterIcon } from "./SocialIcons";
 import { siteInfo } from "@/content/site";
 
 export function Footer() {
@@ -25,6 +26,29 @@ export function Footer() {
             <p className="text-sm leading-relaxed text-green-100/90 max-w-xs">
               A Ghanaian non-governmental, non-profit organization delivering practical agricultural training, livelihood development, research, and consultancy services.
             </p>
+            {/* Social Links */}
+            <div className="flex items-center gap-4 pt-2">
+              {siteInfo.social.facebook && (
+                <a href={siteInfo.social.facebook} target="_blank" rel="noopener noreferrer" className="text-green-100/80 hover:text-white transition-colors" aria-label="Facebook">
+                  <FacebookIcon className="w-5 h-5" />
+                </a>
+              )}
+              {siteInfo.social.instagram && (
+                <a href={siteInfo.social.instagram} target="_blank" rel="noopener noreferrer" className="text-green-100/80 hover:text-white transition-colors" aria-label="Instagram">
+                  <InstagramIcon className="w-5 h-5" />
+                </a>
+              )}
+              {siteInfo.social.linkedin && (
+                <a href={siteInfo.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-green-100/80 hover:text-white transition-colors" aria-label="LinkedIn">
+                  <LinkedinIcon className="w-5 h-5" />
+                </a>
+              )}
+              {siteInfo.social.twitter && (
+                <a href={siteInfo.social.twitter} target="_blank" rel="noopener noreferrer" className="text-green-100/80 hover:text-white transition-colors" aria-label="Twitter">
+                  <TwitterIcon className="w-5 h-5" />
+                </a>
+              )}
+            </div>
           </div>
 
           {/* Quick Links */}

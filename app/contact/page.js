@@ -4,6 +4,7 @@ import { ContactForm } from "@/components/ContactForm";
 import * as Icons from "lucide-react";
 import { Suspense } from "react";
 import { siteInfo } from "@/content/site";
+import { FacebookIcon, InstagramIcon, LinkedinIcon, TwitterIcon } from "@/components/SocialIcons";
 
 export const metadata = {
   title: "Contact Us",
@@ -105,6 +106,38 @@ export default function ContactPage() {
                       <p className="text-sm text-muted mt-1">
                         {siteInfo.contact.contactPerson} (Executive Director)
                       </p>
+                    </div>
+                  </li>
+
+                  {/* Social Media */}
+                  <li className="flex items-start gap-4 pt-4 border-t border-green-100">
+                    <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                      <Icons.Share2 className="w-5 h-5 text-green-850" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-green-950">Social Media</h3>
+                      <div className="flex items-center gap-4 mt-2">
+                        {siteInfo.social.facebook && (
+                          <a href={siteInfo.social.facebook} target="_blank" rel="noopener noreferrer" className="text-green-850 hover:text-green-600 transition-colors" aria-label="Facebook">
+                            <FacebookIcon className="w-5 h-5" />
+                          </a>
+                        )}
+                        {siteInfo.social.instagram && (
+                          <a href={siteInfo.social.instagram} target="_blank" rel="noopener noreferrer" className="text-green-850 hover:text-green-600 transition-colors" aria-label="Instagram">
+                            <InstagramIcon className="w-5 h-5" />
+                          </a>
+                        )}
+                        {siteInfo.social.linkedin && (
+                          <a href={siteInfo.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-green-850 hover:text-green-600 transition-colors" aria-label="LinkedIn">
+                            <LinkedinIcon className="w-5 h-5" />
+                          </a>
+                        )}
+                        {siteInfo.social.twitter && (
+                          <a href={siteInfo.social.twitter} target="_blank" rel="noopener noreferrer" className="text-green-850 hover:text-green-600 transition-colors" aria-label="Twitter">
+                            <TwitterIcon className="w-5 h-5" />
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </li>
                 </ul>

@@ -18,7 +18,7 @@ export const siteInfo = {
   },
   social: {
     facebook: "https://facebook.com/Arattc-Ghana",
-    instagram: "https://instagram.com/Arattc-Ghana",
+    instagram: "https://www.instagram.com/info.arattc?igsh=M20wcjV3dW11dmcw&utm_source=qr",
     linkedin: "https://linkedin.com/company/Arattc-Ghana",
     twitter: null,
   }

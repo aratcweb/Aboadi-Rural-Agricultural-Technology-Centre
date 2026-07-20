@@ -84,13 +84,16 @@ export default function LeadershipPage() {
                 <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden mb-5 bg-cream">
                   <Image 
                     src={member.image} 
-                    alt={member.role} 
+                    alt={member.name} 
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="w-full text-center py-2 px-3 bg-green-900 text-white rounded-xl font-bold text-sm tracking-wide mb-4">
+                <h4 className="text-lg font-bold text-green-950 mb-1 text-center">
+                  {member.name}
+                </h4>
+                <div className="w-full text-center py-1.5 px-3 bg-green-50 text-green-800 rounded-lg font-semibold text-xs tracking-wider mb-4 uppercase">
                   {member.role}
                 </div>
                 <p className="text-muted text-sm leading-relaxed text-left flex-1">
