@@ -22,7 +22,7 @@ export const teamMembers = [
   },
   {
     id: "social-environmental-expert",
-    name: "Andy Deher",
+    name: "Andy De-Heer",
     role: "Social & Environmental Expert",
     image: "/team/social_environmental_expert.png",
     description: "Expert in identifying, assessing, and mitigating potential environmental risks related to land use, water management, agrochemical application, and biodiversity conservation within integrated farming systems."
