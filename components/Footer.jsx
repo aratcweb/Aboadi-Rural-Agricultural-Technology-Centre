@@ -123,9 +123,24 @@ export function Footer() {
 
         <div className="mt-16 pt-8 border-t border-green-900/50 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-green-100/70">
           <p>© {currentYear} Aboadi Rural Agricultural Technology Centre (ARATC). All rights reserved.</p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center gap-6 justify-center md:justify-end">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
+            <a
+              href="https://wesleyconsults.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 hover:text-white transition-colors group"
+            >
+              <span>Website created by</span>
+              <Image
+                src="/images/wesley-consults-logo.png"
+                alt="Wesley Consults"
+                width={100}
+                height={50}
+                className="h-7 w-auto object-contain transition-opacity duration-200 opacity-90 group-hover:opacity-100"
+              />
+            </a>
           </div>
         </div>
       </Container>
