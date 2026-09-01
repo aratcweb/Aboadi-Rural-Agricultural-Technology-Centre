@@ -133,13 +133,18 @@ export function Footer() {
               className="inline-flex items-center gap-2 hover:text-white transition-colors group"
             >
               <span>Website created by</span>
-              <Image
-                src="/images/wesley-consults-logo.png"
-                alt="Wesley Consults"
-                width={100}
-                height={50}
-                className="h-7 w-auto object-contain transition-opacity duration-200 opacity-90 group-hover:opacity-100"
-              />
+              <span className="inline-flex items-center gap-0.5">
+                <span className="font-bold text-green-100 group-hover:text-gold transition-colors duration-200">
+                  Wesley Consults
+                </span>
+                <Image
+                  src="/images/wesley-consults-logo.png"
+                  alt="Wesley Consults"
+                  width={100}
+                  height={50}
+                  className="h-7 w-auto object-contain transition-opacity duration-200 opacity-90 group-hover:opacity-100"
+                />
+              </span>
             </a>
           </div>
         </div>
